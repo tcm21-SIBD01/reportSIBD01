@@ -3,11 +3,16 @@
 ## Modelo E/A
 Entidades: 
 
-FUNCIONARIO (nome, telefone, morada, cc, nidentificacao) 
+FUNCIONARIO (nome, telefone, morada, cc, nidentificacao)
+
 SECCAO (maquilhagem, cosmetico, perfumaria, caixa, reposiçao, gerencia, limpeza, fornecedores) 
+
 HORARIOFUNCIONARIO (departamento, turno)
+
 FORNECEDOR (maquilhagem, comestico, perfumaria)
+
 HORARIOFORNECEDOR (diafixo, stock) 
+
 STOCK (quantidade, validade, reserva) 
 
 
