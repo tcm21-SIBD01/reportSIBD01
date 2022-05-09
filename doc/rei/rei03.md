@@ -1,7 +1,9 @@
 # C3 : Esquema conceptual
 
 ## Modelo E/A
-Entidades: 
+
+
+### Entidades: 
 
 FUNCIONARIO (nome, telefone, morada, cc, nidentificacao)
 
@@ -18,7 +20,7 @@ STOCK (quantidade, validade, reserva)
 
 
 
-Associacoes:
+### Associacoes:
 
 pertenceA (FUNCIONARIO, SECCAO)                  M:N      T/P
 
@@ -31,7 +33,7 @@ entrega (FORNECEDOR, HORARIOFORNECEDOR)          1:1      P/T
 
 
 
-Diagrama: 
+### Diagrama: 
 
 ![An alternative description](imagens/diagrama.png)   
 
