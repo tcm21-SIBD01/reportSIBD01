@@ -24,7 +24,7 @@ Esta empresa tem 3 tipos de fornecedores, um para a maquilhagem, outro para os c
 
 ## Modelação do problema
 
-_(Apresentar os pressupostos utilizados na modelação do problema, estes pressupostos poderão não estar na descrição do trabalho)_
+Com o sistema que criamos pretendemos solucionar o problema da quantidade de vendas na empresa. Sendo que apenas o gerente pode aceder ao sistema. 
 
 
 ---
