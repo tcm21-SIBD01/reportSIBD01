@@ -22,7 +22,7 @@ entrega (FORNECEDOR, HORARIOFORNECEDOR)    1:1       P/T
 
 
 Exemplo de inserção de uma imagem:   
-![An alternative description](images/diagrama.png)   
+![An alternative description](imagens/diagrama.png)   
 
 Always add a description to help the user understand the figure 
 
