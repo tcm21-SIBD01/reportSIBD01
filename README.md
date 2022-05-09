@@ -3,7 +3,7 @@
 
 Projeto desenvolvido pelo grupo SIBD01
 
-## Short theme description
+## Descrição
 
 O nosso trabalho pretende ter uma empresa onde exista um aumento do volume de vendas. 
 
