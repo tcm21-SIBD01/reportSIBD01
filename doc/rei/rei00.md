@@ -10,10 +10,11 @@
 
 _Don't forget to add the group elements_
 
-* Iva Pereira Martins [@ivamartins](https://github.com/ivamartins4)
-* Isis
+* Iva Martins [@ivamartins](https://github.com/ivamartins4)
+* Isis Silva [@isissilva](https://github.com/IsisSilva)
+* Mariana Carneiro [@marianaCarneiro](https://github.com/Mariana4Carneiro)
 
 ---
 _You can add a footer menu for navigation_ 
-< Previous | [^ Main](https://github.com/exemploTrabalho/reportSIBD/) | [Next >](rei01.md)
+< Previous | [^ Main](https://github.com/tcm21-SIBD01/reportSIBD01) | [Next >](rei01.md)
 :--- | :---: | ---: 
