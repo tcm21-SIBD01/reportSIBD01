@@ -3,9 +3,9 @@
 
 ## Descrição do trabalho
 
-Esta empresa pretende a base de dados de uma loja local que pretende aumentar o volume de venda. Para isto acontecer será necessário maior controlo na saída e na entrada do stock de vendas. 
+A empresa Natural Beauty pretende a base de dados de uma loja local que tem como objetivo aumentar o volume de venda. Para isto acontecer será necessário maior controlo na saída e na entrada do stock de vendas. 
 
-A empresa Natural Beauty é composta por funcionários e secções.
+Esta empresa é composta por funcionários e secções.
 
 Os funcionários têm um nome, telefone, morada, número de cartão de cidadão e número de identificação de funcionário.
 
