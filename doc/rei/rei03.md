@@ -35,7 +35,7 @@ entrega (FORNECEDOR, HORARIOFORNECEDOR)          1:1      P/T
 
 ### Diagrama: 
 
-![An alternative description](imagens/diagrama.png)   
+![An alternative description](imagens/diagrama1.png)   
 
 Diagrama do modelo Entidade-Associação
 
