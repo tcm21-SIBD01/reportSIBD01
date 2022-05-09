@@ -29,6 +29,8 @@ dependeDe (STOCK,HORARIOFORNECEDOR)              N:1      P/T
 entrega (FORNECEDOR, HORARIOFORNECEDOR)          1:1      P/T
 
 
+
+
 Diagrama: 
 
 ![An alternative description](imagens/diagrama.png)   
@@ -38,7 +40,13 @@ Diagrama do modelo Entidade-Associação
 
 
 ## Regras de negócio adicionais (Restrições)
-_(Apresentar uma lista detalhada das regras e restrições não possíveis de representar no modelo E/A, que visam a manutenção da consistência e integridade da modelação do problema)_
+
+Só poderá trabalhar nas secções da maquilhagem, cosméticos e perfumaria quem possuir uma formação especializada na área da cosmética. 
+
+Não pode existir troca de turnos entre funcionários. 
+
+Apenas gerentes podem receber entregas. 
+
 
 ---
 [< Previous](rei02.md) | [^ Main](https://github.com/exemploTrabalho/reportSIBD/) | Next >
