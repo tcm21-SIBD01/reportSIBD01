@@ -2,7 +2,7 @@
 
 As opções disponíveis no sistema Natural Beauty dependerão da quantidade de vendas
 
-Assim, o funcionário poderá ter acesso às seguintes funcionalidades: 
+Assim, os funcionários poderão ter acesso às seguintes funcionalidades: 
 
 - reabastecer o stock; 
 - fazer um pedido de restock aos fornecedores; 
