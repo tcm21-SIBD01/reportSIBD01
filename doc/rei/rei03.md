@@ -20,18 +20,22 @@ STOCK (quantidade, validade, reserva)
 
 Associacoes:
 
-pertenceA (FUNCIONARIO, SECCAO)                           M:N      T/P
-definidoPela (HORARIOFUNCIONARIO, SECÇAO)       1:N       T/P
-dependeDe (STOCK,HORARIOFORNECEDOR)            N:1      P/T                           
-entrega (FORNECEDOR, HORARIOFORNECEDOR)    1:1       P/T
+pertenceA (FUNCIONARIO, SECCAO)                  M:N      T/P
+
+definidoPela (HORARIOFUNCIONARIO, SECÇAO)        1:N      T/P
+
+dependeDe (STOCK,HORARIOFORNECEDOR)              N:1      P/T   
+
+entrega (FORNECEDOR, HORARIOFORNECEDOR)          1:1      P/T
 
 
-Exemplo de inserção de uma imagem:   
+Diagrama: 
+
 ![An alternative description](imagens/diagrama.png)   
 
-Always add a description to help the user understand the figure 
+Diagrama do modelo Entidade-Associação
 
-NOTA: Cada entidade-tipo e cada associação devem ter um pequeno texto – um ou dois parágrafos – para descrever esse elemento do modelo e os seus atributos)
+
 
 ## Regras de negócio adicionais (Restrições)
 _(Apresentar uma lista detalhada das regras e restrições não possíveis de representar no modelo E/A, que visam a manutenção da consistência e integridade da modelação do problema)_
