@@ -8,7 +8,7 @@
 
 ## Group _01_
 
-_Don't forget to add the group elements_
+
 
 * Iva Martins [@ivamartins](https://github.com/ivamartins4)
 * Isis Silva [@isissilva](https://github.com/IsisSilva)
