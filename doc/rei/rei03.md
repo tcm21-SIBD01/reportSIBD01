@@ -21,6 +21,8 @@ TURNO (manha, tarde, noite)
 
 FORMACAO (maquilhagem, cosmetica, perfumaria)
 
+SALARIO ( valor, mensal)
+
 
 ### Associacoes:
 
