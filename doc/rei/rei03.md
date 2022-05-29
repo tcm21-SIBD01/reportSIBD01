@@ -17,7 +17,9 @@ HORARIOFORNECEDOR (diafixo, stock)
 
 STOCK (quantidade, validade, reserva) 
 
+PRODUTO
 
+TURNO
 
 
 ### Associacoes:
