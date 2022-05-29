@@ -19,7 +19,7 @@ PRODUTO
 
 TURNO
 
-FORMACAO
+FORMACAO (maquilhagem, cosmetica, perfumaria, caixa)
 
 
 ### Associacoes:
