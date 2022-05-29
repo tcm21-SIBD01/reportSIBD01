@@ -13,7 +13,7 @@ FORNECEDOR (maquilhagem, comestico, perfumaria)
 
 HORARIO (horafim, horainicio, diasemana)
 
-STOCK (quantidade, validade, reserva) 
+????
 
 PRODUTO
 
@@ -21,7 +21,6 @@ TURNO
 
 FORMACAO
 
-HORARIO
 
 ### Associacoes:
 
