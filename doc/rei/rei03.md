@@ -13,7 +13,7 @@ FORNECEDOR (maquilhagem, comestico, perfumaria)
 
 HORARIO (horafim, horainicio, diasemana)
 
-ENTREGA (validade, reserva, quantidade)
+ENTREGA (tipoproduto, validade, reserva, quantidade)
 
 PRODUTO (maquilhagem, cosmetico, perfumaria)
 
@@ -26,26 +26,19 @@ SALARIO (valor, mensal)
 
 ### Associacoes:
 
-(FUNCIONARIO,TURNO)
-(FUNCIONARIO, FORMACAO)
-(TURNO, SECCAO)
-(TURNO, HORARIO)
-(FORNECEDOR, SECCAO)
-(PRODUTO, ENTREGA)
-(FORNECEDOR, ENTREGA)
+possui (FUNCIONARIO,TURNO) N:1 T/P
 
+precisaDe (FUNCIONARIO, FORMACAO) M:N P/P
 
+dependeDe (TURNO, SECCAO) N:1 P/P
 
+definidoPor (TURNO, HORARIO) N:1 T/P
 
-pertenceA (FUNCIONARIO, SECCAO)                  M:N      T/P
+tem (FORNECEDOR, SECCAO) N:1 T/P
 
-definidoPela (HORARIO, SECÇAO)        1:N      T/P
+envia (ENTREGA, PRODUTO) M:N P/T
 
-dependeDe (STOCK,HORARIO)              N:1      P/T   
-
-entrega (FORNECEDOR, HORARIO)          1:1      P/T
-
-recebem (FUNCIONARIO, SALARIO)
+realiza (FORNECEDOR, ENTREGA) 1:N P/T
 
 
 ### Diagrama: 
