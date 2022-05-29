@@ -26,15 +26,26 @@ SALARIO ( valor, mensal)
 
 ### Associacoes:
 
+(FUNCIONARIO,TURNO)
+(FUNCIONARIO, FORMACAO)
+(TURNO, SECCAO)
+(TURNO, HORARIO)
+(FORNECEDOR, SECCAO)
+(PRODUTO, ????)
+(FORNECEDOR, ????)
+
+
+
+
 pertenceA (FUNCIONARIO, SECCAO)                  M:N      T/P
 
-definidoPela (HORARIOFUNCIONARIO, SECÇAO)        1:N      T/P
+definidoPela (HORARIO, SECÇAO)        1:N      T/P
 
-dependeDe (STOCK,HORARIOFORNECEDOR)              N:1      P/T   
+dependeDe (STOCK,HORARIO)              N:1      P/T   
 
-entrega (FORNECEDOR, HORARIOFORNECEDOR)          1:1      P/T
+entrega (FORNECEDOR, HORARIO)          1:1      P/T
 
-
+recebem (FUNCIONARIO, SALARIO)
 
 
 ### Diagrama: 
