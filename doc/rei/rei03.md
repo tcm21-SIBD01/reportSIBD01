@@ -13,7 +13,7 @@ FORNECEDOR (maquilhagem, comestico, perfumaria)
 
 HORARIO (horafim, horainicio, diasemana)
 
-????
+ENTREGA (validade, reserva, quantidade)
 
 PRODUTO (maquilhagem, cosmetico, perfumaria)
 
@@ -31,8 +31,8 @@ SALARIO ( valor, mensal)
 (TURNO, SECCAO)
 (TURNO, HORARIO)
 (FORNECEDOR, SECCAO)
-(PRODUTO, ????)
-(FORNECEDOR, ????)
+(PRODUTO, ENTREGA)
+(FORNECEDOR, ENTREGA)
 
 
 
