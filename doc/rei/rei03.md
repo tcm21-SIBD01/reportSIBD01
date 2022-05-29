@@ -9,11 +9,9 @@ FUNCIONARIO (nome, *telefone, morada, _cc, nidentificacao)
 
 SECCAO (maquilhagem, cosmetico, perfumaria, caixa, reposiçao, gerencia, limpeza, fornecedores) 
 
-HORARIOFUNCIONARIO (departamento, turno)
-
 FORNECEDOR (maquilhagem, comestico, perfumaria)
 
-HORARIOFORNECEDOR (diafixo, stock) 
+HORARIO
 
 STOCK (quantidade, validade, reserva) 
 
