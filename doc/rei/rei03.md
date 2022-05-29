@@ -15,11 +15,11 @@ HORARIO (horafim, horainicio, diasemana)
 
 ????
 
-PRODUTO
+PRODUTO (maquilhagem, cosmetico, perfumaria)
 
-TURNO
+TURNO (manha, tarde, noite)
 
-FORMACAO (maquilhagem, cosmetica, perfumaria, caixa)
+FORMACAO (maquilhagem, cosmetica, perfumaria)
 
 
 ### Associacoes:
