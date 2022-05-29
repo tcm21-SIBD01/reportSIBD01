@@ -15,7 +15,9 @@ Os horários dos funcionários são definidos pela secção e pelo seu turno.
 
 Turno é composto por turno da manhã, da tarde e de noite.
 
-Os funcionários recebem o salário mensal ao dia 2 de cada mês. 
+Os funcionários recebem o salário. 
+
+O salário é definido pelo valor e é fornecido mensalmente.
 
 Os funcionários de caixa, reposição, gerência, limpeza e fornecedores são os únicos que não necessitam de formação especializada na área da cosmética. Todos os funcionários das outras secções necessitam obrigatoriamente de formação nesta área. 
 
