@@ -5,7 +5,7 @@
 
 ### Entidades: 
 
-FUNCIONARIO (nome, *telefone, morada, _cc, nidentificacao)
+FUNCIONARIO (nome, *telefone, morada, cc, _nidentificacao)
 
 SECCAO (maquilhagem, cosmetico, perfumaria, caixa, reposiçao, gerencia, limpeza, fornecedores) 
 
