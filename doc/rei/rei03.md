@@ -21,6 +21,7 @@ PRODUTO
 
 TURNO
 
+FORMACAO
 
 ### Associacoes:
 
