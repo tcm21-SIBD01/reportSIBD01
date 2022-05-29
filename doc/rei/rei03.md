@@ -11,7 +11,7 @@ SECCAO (maquilhagem, cosmetico, perfumaria, caixa, reposiçao, gerencia, limpeza
 
 FORNECEDOR (maquilhagem, comestico, perfumaria)
 
-HORARIO
+HORARIO (horafim, horainicio, diasemana)
 
 STOCK (quantidade, validade, reserva) 
 
