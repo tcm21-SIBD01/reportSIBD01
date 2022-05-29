@@ -13,7 +13,7 @@ FORNECEDOR (maquilhagem, cosmetico, perfumaria)
 
 HORARIO (horafim, horainicio, diasemana)
 
-ENTREGA (tipoproduto, validade, reserva, quantidade)
+ENTREGA (_tipoproduto, validade, reserva, quantidade)
 
 PRODUTO (maquilhagem, cosmetico, perfumaria)
 
