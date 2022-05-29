@@ -9,7 +9,7 @@ FUNCIONARIO (nome, *telefone, morada, cc, _nidentificacao)
 
 SECCAO (maquilhagem, cosmetico, perfumaria, caixa, reposicao, gerencia, limpeza, fornecedore) 
 
-FORNECEDOR (maquilhagem, comestico, perfumaria)
+FORNECEDOR (maquilhagem, cosmetico, perfumaria)
 
 HORARIO (horafim, horainicio, diasemana)
 
