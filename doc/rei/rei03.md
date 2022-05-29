@@ -7,7 +7,7 @@
 
 FUNCIONARIO (nome, *telefone, morada, cc, _nidentificacao)
 
-SECCAO (maquilhagem, cosmetico, perfumaria, caixa, reposiçao, gerencia, limpeza, fornecedores) 
+SECCAO (maquilhagem, cosmetico, perfumaria, caixa, reposicao, gerencia, limpeza, fornecedore) 
 
 FORNECEDOR (maquilhagem, comestico, perfumaria)
 
