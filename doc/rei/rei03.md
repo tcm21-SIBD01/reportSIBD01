@@ -23,6 +23,8 @@ TURNO
 
 FORMACAO
 
+HORARIO
+
 ### Associacoes:
 
 pertenceA (FUNCIONARIO, SECCAO)                  M:N      T/P
