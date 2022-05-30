@@ -34,7 +34,7 @@ dependeDe (TURNO, SECCAO) N:1 P/P
 
 definidoPor (TURNO, HORARIO) N:1 T/P
 
-tem (FORNECEDOR, SECCAO) N:1 T/P
+tem (FORNECEDOR, SECCAO , HORARIO ) N:1:1 T/P/P
 
 envia (ENTREGA, PRODUTO) M:N P/T
 
