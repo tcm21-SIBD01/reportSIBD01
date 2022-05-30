@@ -1,6 +1,6 @@
 # C3 : Normalização
 
-## Relações
+## Conversão do Modelo EA para Modelo Relacional
 
 ### Passo1: Entidades e Atributos
 
@@ -121,6 +121,7 @@ Não existem associações ternárias
 Não existem entidades fracas
 
 
+## Relacoes 
 
 
 
