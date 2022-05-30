@@ -156,7 +156,7 @@ Não existem entidades fracas
 |-----------|---------|----------|
 |maquilhagem|cosmetico|perfumaria|
 
-|Turno|     |     |                    |                                      |           
+|Turno|     |     |                    |                  |                   |           
 |-----|-----|-----|--------------------|------------------|-------------------|
 |manha|tarde|noite|#maquilhagem->Seccao|#cosmetico->Seccao|#perfumaria->Seccao|
 
@@ -168,7 +168,7 @@ Não existem entidades fracas
 |--------------|------------------|-----------------|----------------|
 |#caixa->Seccao|#reposicao->Seccao|#gerencia->Seccao|#limpeza->Seccao|
 
-|Turno|             |                 |                    |                    |
+|Turno|             |                 |                    |                   |
 |-------------------|-----------------|--------------------|-------------------|
 |#fornecedor->Seccao|#horafim->Horario|#horainicio->Horario|#diasemana->Horario|
 
