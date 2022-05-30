@@ -23,7 +23,9 @@ Os funcionários de caixa, reposição, gerência, limpeza e fornecedores são o
 
 Esta empresa tem 3 tipos de fornecedores, um para a maquilhagem, outro para os cosméticos e outro para a perfumaria. Cada fornecedor tem um horário fixo de entrega, sendo entregue sempre de manhã, em que a maquilhagem e os cosméticos são entregues à segunda-feira e a perfumaria é entregue à sexta-feira.
 
-Cada entrega de stock tem uma identificação dos produtos entregues, quanto ao tipo de produto, quantidade, validade e reserva. 
+Cada entrega de stock tem uma identificação dos produtos entregues, quanto ao tipo de produto, quantidade, validade e reserva.
+
+As entregas só podem ser recebidas pelo gerente.
 
 
 ## Modelação do problema
