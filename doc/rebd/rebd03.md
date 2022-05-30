@@ -2,7 +2,7 @@
 
 ## Relações
 
-# Passo1: Entidades e Atributos
+### Passo1: Entidades e Atributos
 
 Funcionario (nome, *telefone, morada, cc, _nidentificacao)
 
@@ -24,11 +24,11 @@ Formacao (maquilhagem, cosmetica, perfumaria)
 Salario (valor, mensal)
 
 
-# Passo2: Associações 1:1
+### Passo2: Associações 1:1
 
 Não existem associações com cardinalidade 1:1
 
-# Passo3: Associações 1:N
+### Passo3: Associações 1:N
 
 Funcionario (nome, *telefone, morada, cc, _nidentificacao
 #manha -> Turno, #tarde -> Turno, #noite -> Turno)
@@ -51,7 +51,7 @@ Formacao (maquilhagem, cosmetica, perfumaria)
 
 Salario (valor, mensal)
 
-# Passo 4: Associações N:M
+### Passo 4: Associações N:M
 
 Funcionario (nome, *telefone, morada, cc, _nidentificacao
 #manha -> Turno, #tarde -> Turno, #noite -> Turno)
@@ -78,7 +78,7 @@ PrecisaDe (#_nidentificacao -> Funcionario, #maquilhagem -> Formacao, #cosmetica
 
 Envia ( #maquilhagem -> Produto, #cosmetica -> Produro, #perfumaria -> Produto, #tipoproduto -> Entrega)
 
-# Passo 5: Atributo Multivalor
+### Passo 5: Atributo Multivalor
 
 
 Funcionario (nome, *telefone, morada, cc, _nidentificacao
@@ -110,13 +110,13 @@ Contacto (#_nidentificacao -> Funcionario, telefone)
 
 
 
-# Passo6: associação ternária
+### Passo6: associação ternária
 
 Não existem associações ternárias
 
 
 
-# Passo 7 : Entidades Fracas
+### Passo 7 : Entidades Fracas
 
 Não existem entidades fracas
 
