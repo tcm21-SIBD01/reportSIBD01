@@ -13,6 +13,5 @@ Apenas gerentes podem receber entregas.
 
 O gerente deve fazer uma análise mensal relativamente ás vendas efectuadas em cada mês. 
 
----
-[< Previous](rebd01.md) | [^ Main] (https://github.com/tcm21-SIBD01/reportSIBD01) | [Next >](rebd03.md)
+[< Previous](rebd02.md) | [^ Main](https://github.com/tcm21-SIBD01/reportSIBD01) | [Next >](rebd03.md)
 :--- | :---: | ---: 
