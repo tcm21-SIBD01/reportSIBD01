@@ -124,29 +124,74 @@ Não existem entidades fracas
 ## Relacoes 
 
 
-|Funcionario|         |      |  |               |               |               |               |
-|-----------|-------- |------|--|---------------|---------------|---------------|---------------|
-|nome       |*telefone|morada|cc|_nidentificacao|#manha -> Turno|#manha -> Turno|#noite -> Turno|
+|Funcionario|         |      |  |               |              |               |          |
+|-----------|-------- |------|--|---------------|--------------|---------------|----------|
+|nome       |*telefone|morada|cc|_nidentificacao|#manha->Turno|#manha->Turno|#noite->Turno|
 
 |Seccao     |         |          |     |         |        |       |          |             
 |-----------|---------|----------|-----|---------|--------|-------|----------|
 |maquilhagem|cosmetica|perfumaria|caixa|reposicao|gerencia|limpeza|fornecedor|
 
-|Fornecedor |         |          |                      |                    |             
-|-----------|---------|----------|----------------------|--------------------|
-|maquilhagem|cosmetica|perfumaria|#maquilhagem -> Seccao|#cosmetico -> Seccao|
+|Fornecedor |         |          |                    |                  |             
+|-----------|---------|----------|--------------------|------------------|
+|maquilhagem|cosmetica|perfumaria|#maquilhagem->Seccao|#cosmetico->Seccao|
 
-|Fornecedor         |               |                    |                   |         
-|-------------------|---------------|--------------------|-------------------|
-|#perfumaria->Seccao|#caixa-> Seccao|#reposicao -> Seccao|#gerencia -> Seccao|
+|Fornecedor         |              |                  |                 |         
+|-------------------|--------------|------------------|-----------------|
+|#perfumaria->Seccao|#caixa->Seccao|#reposicao->Seccao|#gerencia->Seccao|
 
-|Fornecedor        |                     |        
-|------------------|---------------------|
-|#limpeza -> Seccao|#fornecedor -> Seccao|
+|Fornecedor      |                   |        
+|----------------|-------------------|
+|#limpeza->Seccao|#fornecedor->Seccao|
 
 |Horario|          |         |      
 |-------|----------|---------|
 |horafim|horainicio|diasemana|
+
+|Entrega    |        |       |          |
+|-----------|--------|-------|----------|
+|tipoproduto|validade|reverva|quantidade|
+
+|Produto    |         |          |      
+|-----------|---------|----------|
+|maquilhagem|cosmetico|perfumaria|
+
+|Turno|     |     |                    |                                      |           
+|-----|-----|-----|--------------------|------------------|-------------------|
+|manha|tarde|noite|#maquilhagem->Seccao|#cosmetico->Seccao|#perfumaria->Seccao|
+
+|Turno|     |     |                    |                  |                   |           
+|-----|-----|-----|--------------------|------------------|-------------------|
+|manha|tarde|noite|#maquilhagem->Seccao|#cosmetico->Seccao|#perfumaria->Seccao|
+
+|Turno         |                  |                 |                |           
+|--------------|------------------|-----------------|----------------|
+|#caixa->Seccao|#reposicao->Seccao|#gerencia->Seccao|#limpeza->Seccao|
+
+|Turno|             |                 |                    |                    |
+|-------------------|-----------------|--------------------|-------------------|
+|#fornecedor->Seccao|#horafim->Horario|#horainicio->Horario|#diasemana->Horario|
+
+|Formacao   |         |          |      
+|-----------|---------|----------|
+|maquilhagem|cosmetico|perfumaria|
+
+|Salario|      |      
+|-------|------|
+|valor  |mensal|
+
+|PrecisaDe         |                   |                      |                     |           |
+|------------------|-------------------|----------------------|---------------------|-----------|
+|#_nidentificacao->Funcionario|#maquilhagem->Formacao|#cosmetica->Formacao|#perfumaria->Formacao|
+
+|Envia                |                   |                    |                       |       
+|---------------------|-------------------|--------------------|-----------------------|
+|#maquilhagem->Produto|#cosmetica->Produro|#perfumaria->Produto|#tipoproduto -> Entrega|
+
+|Formacao                     |        |      
+|-----------------------------|--------|
+|#_nidentificacao->Funcionario|telefone|
+
 
 ## Normalização do Esquema Relacional
 _(Apresentar o estudo da normalização das relações obtidas na secção anterior. Desnormalizar se necessário.)_
