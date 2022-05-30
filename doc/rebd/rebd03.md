@@ -124,9 +124,29 @@ Não existem entidades fracas
 ## Relacoes 
 
 
+|Funcionario|         |      |  |               |               |               |               |
+|-----------|-------- |------|--|---------------|---------------|---------------|---------------|
+|nome       |*telefone|morada|cc|_nidentificacao|#manha -> Turno|#manha -> Turno|#noite -> Turno|
 
+|Seccao     |         |          |     |         |        |       |          |             
+|-----------|---------|----------|-----|---------|--------|-------|----------|
+|maquilhagem|cosmetica|perfumaria|caixa|reposicao|gerencia|limpeza|fornecedor|
 
+|Fornecedor |         |          |                      |                    |             
+|-----------|---------|----------|----------------------|--------------------|
+|maquilhagem|cosmetica|perfumaria|#maquilhagem -> Seccao|#cosmetico -> Seccao|
 
+|Fornecedor         |               |                    |                   |         
+|-------------------|---------------|--------------------|-------------------|
+|#perfumaria->Seccao|#caixa-> Seccao|#reposicao -> Seccao|#gerencia -> Seccao|
+
+|Fornecedor        |                     |        
+|------------------|---------------------|
+|#limpeza -> Seccao|#fornecedor -> Seccao|
+
+|Horario|          |         |      
+|-------|----------|---------|
+|horafim|horainicio|diasemana|
 
 ## Normalização do Esquema Relacional
 _(Apresentar o estudo da normalização das relações obtidas na secção anterior. Desnormalizar se necessário.)_
