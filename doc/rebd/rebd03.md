@@ -24,11 +24,11 @@ Formacao (maquilhagem, cosmetica, perfumaria)
 Salario (valor, mensal)
 
 
-### Passo2: Associações 1:1
+### Passo 2: Associações 1:1
 
 Não existem associações com cardinalidade 1:1
 
-### Passo3: Associações 1:N
+### Passo 3: Associações 1:N
 
 Funcionario (nome, *telefone, morada, cc, _nidentificacao
 #manha -> Turno, #tarde -> Turno, #noite -> Turno)
@@ -110,7 +110,7 @@ Contacto (#_nidentificacao -> Funcionario, telefone)
 
 
 
-### Passo6: associação ternária
+### Passo 6: associação ternária
 
 Não existem associações ternárias
 
