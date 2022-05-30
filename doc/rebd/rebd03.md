@@ -168,7 +168,7 @@ Não existem entidades fracas
 |--------------|------------------|-----------------|----------------|
 |#caixa->Seccao|#reposicao->Seccao|#gerencia->Seccao|#limpeza->Seccao|
 
-|Turno|             |                 |                    |                   |
+|Turno              |                 |                    |                   |
 |-------------------|-----------------|--------------------|-------------------|
 |#fornecedor->Seccao|#horafim->Horario|#horainicio->Horario|#diasemana->Horario|
 
