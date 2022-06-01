@@ -31,16 +31,6 @@ Cada entrega de stock tem uma identificação dos produtos entregues, quanto ao 
 Com o sistema que criamos pretendemos solucionar o problema da quantidade de vendas na empresa. Sendo que apenas o gerente pode aceder ao sistema. 
 
 
-_(Relembrar a descrição do trabalho apresentada no REI, utilizando linguagem natural. Esta secção permite introduzir detalhes não apresentados no relatório anterior. Inserir nesta secção os pressupostos utilizados na modelação.)_
-
-
-
----
-[< Previous](rei00.md) | [^ Main](https://github.com/tcm21-SIBD01/reportSIBD01) | [Next >](rei02.md)
-:--- | :---: | ---:  anterior. Inserir nesta secção os pressupostos utilizados na modelação.)_
-
-
-
 
 ## Descrição dos requisitos do utilizador
 
