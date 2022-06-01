@@ -2,7 +2,7 @@
 
 ## Conversão do Modelo EA para Modelo Relacional
 
-Passo1: Entidades e Atributos
+### Passo1: Entidades e Atributos
 
 Funcionario (nome, *telefone, morada, cc, _nidentificacao)
 
@@ -20,11 +20,15 @@ Turno (manha, tarde, noite)
 
 Formacao (maquilhagem, cosmetica, perfumaria)
 
-Passo2: Associações 1:1
+
+
+### Passo2: Associações 1:1
 
 Não existem associações com cardinalidade 1:1
 
-Passo3: Associações 1:N
+
+
+### Passo3: Associações 1:N
 Funcionario (nome, *telefone, morada, cc, _nidentificacao
 #manha -> Turno, #tarde -> Turno, #noite -> Turno)
 
@@ -44,7 +48,9 @@ Turno (manha, tarde, noite
 
 Formacao (maquilhagem, cosmetica, perfumaria)
 
-Passo4: Associações N:M
+
+
+### Passo4: Associações N:M
 
 Funcionario (nome, *telefone, morada, cc, _nidentificacao
 #manha -> Turno, #tarde -> Turno, #noite -> Turno)
@@ -69,7 +75,9 @@ PrecisaDe (#_nidentificacao -> Funcionario, #maquilhagem -> Formacao, #cosmetica
 
 Envia ( #maquilhagem -> Produto, #cosmetica -> Produro, #perfumaria -> Produto, #tipoproduto -> Entrega)
 
-Passo5: Atributo Multivalor
+
+
+### Passo5: Atributo Multivalor
 
 Funcionario (nome, *telefone, morada, cc, _nidentificacao
 #manha -> Turno, #tarde -> Turno, #noite -> Turno)
@@ -96,7 +104,9 @@ Envia ( #maquilhagem -> Produto, #cosmetica -> Produro, #perfumaria -> Produto, 
 
 Contacto (#_nidentificacao -> Funcionario, telefone)
 
-Passo6: Associação ternária
+
+
+### Passo 6: Associação ternária
 
 Funcionario (nome, *telefone, morada, cc, _nidentificacao
 #manha -> Turno, #tarde -> Turno, #noite -> Turno)
@@ -125,7 +135,9 @@ Contacto (#_nidentificacao -> Funcionario, telefone)
 
 Tem ( #maquilhagem -> Fornecedor, #cosmetico -> Fornecedor, #perfumaria -> Fornecedor, ( #maquilhagem -> Seccao, #cosmetico -> Seccao, #perfumaria -> Seccao, #horafim -> Horario, #horainicio -> Horario, #diasemana -> Horario)
 
-Passo7: Entidades Fracas
+ 
+
+### Passo 7: Entidades Fracas
 
 Não existem entidades fracas
 
