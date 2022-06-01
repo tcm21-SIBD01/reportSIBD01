@@ -26,6 +26,7 @@ Não existem associações com cardinalidade 1:1
 
 Passo3: Associações 1:N
 Funcionario (nome, *telefone, morada, cc, _nidentificacao
+
 #manha -> Turno, #tarde -> Turno, #noite -> Turno)
 
 Seccao (maquilhagem, cosmetico, perfumaria, caixa, reposiçao, gerencia, limpeza, fornecedores) 
@@ -35,6 +36,7 @@ Fornecedor (maquilhagem, comestico, perfumaria)
 Horario (horafim, horainicio, diasemana)
 
 Entrega (tipoproduto, validade, reserva, quantidade
+
 #maquilhagem -> Fornecedor, #cosmetico -> Fornecedor, #perfumaria -> Fornecedor)
 
 Produto(maquilhagem, cosmetico, perfumaria)
@@ -48,6 +50,7 @@ Formacao (maquilhagem, cosmetica, perfumaria)
 Passo4: Associações N:M
 
 Funcionario (nome, *telefone, morada, cc, _nidentificacao
+
 #manha -> Turno, #tarde -> Turno, #noite -> Turno)
 
 Seccao (maquilhagem, cosmetico, perfumaria, caixa, reposiçao, gerencia, limpeza, fornecedores) 
@@ -57,19 +60,25 @@ Fornecedor (maquilhagem, comestico, perfumaria)
 Horario (horafim, horainicio, diasemana)
 
 Entrega (tipoproduto, validade, reserva, quantidade
+
 #maquilhagem -> Fornecedor, #cosmetico -> Fornecedor, #perfumaria -> Fornecedor)
 
 Produto(maquilhagem, cosmetico, perfumaria)
 
 Turno (manha, tarde, noite
+
 #maquilhagem -> Seccao, #cosmetico -> Seccao, #perfumaria-> Seccao, #caixa-> Seccao, #reposicao -> Seccao, #gerencia -> Seccao, #limpeza -> Seccao, #fornecedor -> Seccao, #horafim -> Horario, #horainicio -> Horario, #diasemana -> Horario)
 
 Formacao (maquilhagem, cosmetica, perfumaria)
 
 PrecisaDe (#_nidentificacao -> Funcionario, #maquilhagem -> Formacao, #cosmetica -> Formacao, #perfumaria -> Formacao)
+
 Envia ( #maquilhagem -> Produto, #cosmetica -> Produro, #perfumaria -> Produto, #tipoproduto -> Entrega)
+
 Passo5: Atributo Multivalor
+
 Funcionario (nome, *telefone, morada, cc, _nidentificacao
+
 #manha -> Turno, #tarde -> Turno, #noite -> Turno)
 
 Seccao (maquilhagem, cosmetico, perfumaria, caixa, reposiçao, gerencia, limpeza, fornecedores) 
@@ -79,22 +88,27 @@ Fornecedor (maquilhagem, comestico, perfumaria)
 Horario (horafim, horainicio, diasemana)
 
 Entrega (tipoproduto, validade, reserva, quantidade
+
 #maquilhagem -> Fornecedor, #cosmetico -> Fornecedor, #perfumaria -> Fornecedor)
 
 Produto(maquilhagem, cosmetico, perfumaria)
 
 Turno (manha, tarde, noite
+
 #maquilhagem -> Seccao, #cosmetico -> Seccao, #perfumaria-> Seccao, #caixa-> Seccao, #reposicao -> Seccao, #gerencia -> Seccao, #limpeza -> Seccao, #fornecedor -> Seccao, #horafim -> Horario, #horainicio -> Horario, #diasemana -> Horario)
 
 Formacao (maquilhagem, cosmetica, perfumaria)
 
 PrecisaDe (#_nidentificacao -> Funcionario, #maquilhagem -> Formacao, #cosmetica -> Formacao, #perfumaria -> Formacao)
+
 Envia ( #maquilhagem -> Produto, #cosmetica -> Produro, #perfumaria -> Produto, #tipoproduto -> Entrega)
+
 Contacto (#_nidentificacao -> Funcionario, telefone)
 
 Passo6: Associação ternária
 
 Funcionario (nome, *telefone, morada, cc, _nidentificacao
+
 #manha -> Turno, #tarde -> Turno, #noite -> Turno)
 
 Seccao (maquilhagem, cosmetico, perfumaria, caixa, reposiçao, gerencia, limpeza, fornecedores) 
@@ -104,17 +118,21 @@ Fornecedor (maquilhagem, comestico, perfumaria)
 Horario (horafim, horainicio, diasemana)
 
 Entrega (tipoproduto, validade, reserva, quantidade
+
 #maquilhagem -> Fornecedor, #cosmetico -> Fornecedor, #perfumaria -> Fornecedor)
 
 Produto(maquilhagem, cosmetico, perfumaria)
 
 Turno (manha, tarde, noite
+
 #maquilhagem -> Seccao, #cosmetico -> Seccao, #perfumaria-> Seccao, #caixa-> Seccao, #reposicao -> Seccao, #gerencia -> Seccao, #limpeza -> Seccao, #fornecedor -> Seccao, #horafim -> Horario, #horainicio -> Horario, #diasemana -> Horario)
 
 Formacao (maquilhagem, cosmetica, perfumaria)
 
 PrecisaDe (#_nidentificacao -> Funcionario, #maquilhagem -> Formacao, #cosmetica -> Formacao, #perfumaria -> Formacao)
+
 Envia ( #maquilhagem -> Produto, #cosmetica -> Produro, #perfumaria -> Produto, #tipoproduto -> Entrega)
+
 Contacto (#_nidentificacao -> Funcionario, telefone)
 
 Tem ( #maquilhagem -> Fornecedor, #cosmetico -> Fornecedor, #perfumaria -> Fornecedor, ( #maquilhagem -> Seccao, #cosmetico -> Seccao, #perfumaria -> Seccao, #horafim -> Horario, #horainicio -> Horario, #diasemana -> Horario)
@@ -122,8 +140,6 @@ Tem ( #maquilhagem -> Fornecedor, #cosmetico -> Fornecedor, #perfumaria -> Forne
 Passo7: Entidades Fracas
 
 Não existem entidades fracas
-![image](https://user-images.githubusercontent.com/96250970/171446759-12ed73d8-ee79-42ed-a3c8-f58afa778c41.png)
-
 
 
 ## Relacoes 
