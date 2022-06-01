@@ -1,6 +1,44 @@
 # C2 : Esquema conceptual
 
 ## Modelo E/A
+
+### Entidades: 
+
+FUNCIONARIO (nome, *telefone, morada, nic , _nidentificacao)
+
+SECCAO (maquilhagem, cosmetico, perfumaria, caixa, reposicao, gerencia, limpeza, fornecedore) 
+
+FORNECEDOR (maquilhagem, cosmetico, perfumaria)
+
+HORARIO (horafim, horainicio, diasemana)
+
+ENTREGA (_tipoproduto, validade, reserva, quantidade)
+
+PRODUTO (maquilhagem, cosmetico, perfumaria)
+
+TURNO (manha, tarde, noite)
+
+FORMACAO (maquilhagem, cosmetica, perfumaria)
+
+
+### Associacoes:
+
+possui (FUNCIONARIO,TURNO) N:1 T/P
+
+precisaDe (FUNCIONARIO, FORMACAO) M:N P/P
+
+dependeDe (TURNO, SECCAO) N:1 P/P
+
+definidoPor (TURNO, HORARIO) N:1 T/P
+
+tem (FORNECEDOR, SECCAO , HORARIO ) N:1:1 T/P/P
+
+envia (ENTREGA, PRODUTO) M:N P/T
+
+realiza (FORNECEDOR, ENTREGA) 1:N P/T
+
+### Diagrama 
+
 ![An alternative description](imagens/diagrama1.jpeg)
 
 ## Regras de negócio adicionais (Restrições)
