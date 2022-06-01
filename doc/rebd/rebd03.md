@@ -21,6 +21,7 @@ Turno (manha, tarde, noite)
 Formacao (maquilhagem, cosmetica, perfumaria)
 
 Passo2: Associações 1:1
+
 Não existem associações com cardinalidade 1:1
 
 Passo3: Associações 1:N
@@ -39,6 +40,7 @@ Entrega (tipoproduto, validade, reserva, quantidade
 Produto(maquilhagem, cosmetico, perfumaria)
 
 Turno (manha, tarde, noite
+
 #maquilhagem -> Seccao, #cosmetico -> Seccao, #perfumaria-> Seccao, #caixa-> Seccao, #reposicao -> Seccao, #gerencia -> Seccao, #limpeza -> Seccao, #fornecedor -> Seccao, #horafim -> Horario, #horainicio -> Horario, #diasemana -> Horario)
 
 Formacao (maquilhagem, cosmetica, perfumaria)
