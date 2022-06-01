@@ -149,9 +149,14 @@ Não existem entidades fracas
 |-------|----------|---------|
 |horafim|horainicio|diasemana|
 
-|Entrega     |        |       |          |
-|------------|--------|-------|----------|
-|_tipoproduto|validade|reverva|quantidade|
+|Entrega     |        |       |          |                        |                      |
+|------------|--------|-------|----------|------------------------|----------------------|
+|_tipoproduto|validade|reverva|quantidade|#maquilhagem->Fornecedor|#cosmetico->Fornecedor|
+
+|Entrega                  |      
+|-------------------------|
+|#perfumaria -> Fornecedor|
+
 
 |Produto    |         |          |      
 |-----------|---------|----------|
@@ -161,9 +166,6 @@ Não existem entidades fracas
 |-----|-----|-----|--------------------|------------------|-------------------|
 |manha|tarde|noite|#maquilhagem->Seccao|#cosmetico->Seccao|#perfumaria->Seccao|
 
-|Turno|     |     |                    |                  |                   |           
-|-----|-----|-----|--------------------|------------------|-------------------|
-|manha|tarde|noite|#maquilhagem->Seccao|#cosmetico->Seccao|#perfumaria->Seccao|
 
 |Turno         |                  |                 |                |           
 |--------------|------------------|-----------------|----------------|
@@ -177,21 +179,25 @@ Não existem entidades fracas
 |-----------|---------|----------|
 |maquilhagem|cosmetico|perfumaria|
 
-|Salario|      |      
-|-------|------|
-|valor  |mensal|
-
-|PrecisaDe         |                   |                      |                     |           |
-|------------------|-------------------|----------------------|---------------------|-----------|
+|PrecisaDe                    |                      |                       |                  |
+|-----------------------------|----------------------|--------------------|---------------------|
 |#_nidentificacao->Funcionario|#maquilhagem->Formacao|#cosmetica->Formacao|#perfumaria->Formacao|
 
-|Envia                |                   |                    |                       |       
-|---------------------|-------------------|--------------------|-----------------------|
-|#maquilhagem->Produto|#cosmetica->Produro|#perfumaria->Produto|#tipoproduto -> Entrega|
+|Envia                |                   |                    |                        |       
+|---------------------|-------------------|--------------------|------------------------|
+|#maquilhagem->Produto|#cosmetica->Produto|#perfumaria->Produto|#_tipoproduto -> Entrega|
 
-|Formacao                     |        |      
+|Contacto                     |        |      
 |-----------------------------|--------|
 |#_nidentificacao->Funcionario|telefone|
+
+|Tem                     |                      |                       |                    |  
+|------------------------|----------------------|-----------------------|--------------------|
+|#maquilhagem->Fornecedor|#cosmetico->Fornecedor|#perfumaria->Fornecedor|#maquilhagem->Seccao|
+
+|Tem                |                  |                 |                    |                   | 
+|-------------------|------------------|-----------------|--------------------|-------------------|
+|#cosmetico->Seccao#|perfumaria->Seccao|#horafim->Horario|#horainicio->Horario|#diasemana->Horario|
 
 
 ## Normalização do Esquema Relacional
