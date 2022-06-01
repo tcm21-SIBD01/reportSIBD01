@@ -34,7 +34,7 @@ Fornecedor (maquilhagem, comestico, perfumaria)
 
 Horario (horafim, horainicio, diasemana)
 
-Entrega (tipoproduto, validade, reserva, quantidade
+Entrega (_tipoproduto, validade, reserva, quantidade
 #maquilhagem -> Fornecedor, #cosmetico -> Fornecedor, #perfumaria -> Fornecedor)
 
 Produto(maquilhagem, cosmetico, perfumaria)
@@ -55,7 +55,7 @@ Fornecedor (maquilhagem, comestico, perfumaria)
 
 Horario (horafim, horainicio, diasemana)
 
-Entrega (tipoproduto, validade, reserva, quantidade
+Entrega (_tipoproduto, validade, reserva, quantidade
 #maquilhagem -> Fornecedor, #cosmetico -> Fornecedor, #perfumaria -> Fornecedor)
 
 Produto(maquilhagem, cosmetico, perfumaria)
@@ -80,7 +80,7 @@ Fornecedor (maquilhagem, comestico, perfumaria)
 
 Horario (horafim, horainicio, diasemana)
 
-Entrega (tipoproduto, validade, reserva, quantidade
+Entrega (_tipoproduto, validade, reserva, quantidade
 #maquilhagem -> Fornecedor, #cosmetico -> Fornecedor, #perfumaria -> Fornecedor)
 
 Produto(maquilhagem, cosmetico, perfumaria)
@@ -107,7 +107,7 @@ Fornecedor (maquilhagem, comestico, perfumaria)
 
 Horario (horafim, horainicio, diasemana)
 
-Entrega (tipoproduto, validade, reserva, quantidade
+Entrega (_tipoproduto, validade, reserva, quantidade
 #maquilhagem -> Fornecedor, #cosmetico -> Fornecedor, #perfumaria -> Fornecedor)
 
 Produto(maquilhagem, cosmetico, perfumaria)
@@ -141,25 +141,17 @@ Não existem entidades fracas
 |-----------|---------|----------|-----|---------|--------|-------|----------|
 |maquilhagem|cosmetica|perfumaria|caixa|reposicao|gerencia|limpeza|fornecedor|
 
-|Fornecedor |         |          |                    |                  |             
-|-----------|---------|----------|--------------------|------------------|
-|maquilhagem|cosmetica|perfumaria|#maquilhagem->Seccao|#cosmetico->Seccao|
-
-|Fornecedor         |              |                  |                 |         
-|-------------------|--------------|------------------|-----------------|
-|#perfumaria->Seccao|#caixa->Seccao|#reposicao->Seccao|#gerencia->Seccao|
-
-|Fornecedor      |                   |        
-|----------------|-------------------|
-|#limpeza->Seccao|#fornecedor->Seccao|
+|Fornecedor |         |          |            
+|-----------|---------|----------|
+|maquilhagem|cosmetica|perfumaria|
 
 |Horario|          |         |      
 |-------|----------|---------|
 |horafim|horainicio|diasemana|
 
-|Entrega    |        |       |          |
-|-----------|--------|-------|----------|
-|tipoproduto|validade|reverva|quantidade|
+|Entrega     |        |       |          |
+|------------|--------|-------|----------|
+|_tipoproduto|validade|reverva|quantidade|
 
 |Produto    |         |          |      
 |-----------|---------|----------|
