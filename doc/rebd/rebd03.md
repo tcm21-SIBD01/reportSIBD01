@@ -213,7 +213,22 @@ Não existem entidades fracas
 
 
 ## Normalização do Esquema Relacional
-_(Apresentar o estudo da normalização das relações obtidas na secção anterior. Desnormalizar se necessário.)_
+
+
+| Nome do funcionario | Número de identificação | Secção      | Turno |
+| ------------------- | ----------------------  | ----------- | ----- |        
+| Maria Augusta       |             1           | Maquilhagem | Manhã |
+| ------------------- | ----------------------  | ----------- | ----- |
+| Ana Soares          |             2           | Maquilhagem | Manhã |
+| ------------------- | ----------------------  | ----------- | ----- |
+| Joana Carvalho      |             3           | Maquilhagem | Tarde |
+| ------------------- | ----------------------  | ----------- | ----- |
+| Claúdio Ramos       |             4           | Maquilhagem | Tarde |
+| ------------------- | ----------------------  | ----------- | ----- |
+| Inês Batista        |             5           | Maquilhagem | Tarde |
+
+
+
 
 ---
 [< Previous](rebd02.md) | [^ Main](https://github.com/exemploTrabalho/reportSIBD/) | [Next >](rebd04.md)
