@@ -34,7 +34,7 @@ Com o sistema que criamos pretendemos solucionar o problema da quantidade de ven
 
 ## Descrição dos requisitos do utilizador
 
-_(Descrever os tipos de utilizadores (actores) do sistema de informação e as funcionalidade (casos de uso) a que estes terão acesso. Permite refinar os requisitos apresentados no REI.)_
+O gerente tem acesso às compras efectuadas por cada cliente mensalmente, sendo que só o gerente tem acesso ao sistema da empresa. 
 
 
 ---
