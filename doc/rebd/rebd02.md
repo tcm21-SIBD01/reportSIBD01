@@ -1,7 +1,7 @@
 # C2 : Esquema conceptual
 
 ## Modelo E/A
-_(Introduzir o diagrama do modelo Entidade-Associação. Podem apresentar alterações ao diagrama apresentado no REI)_
+![An alternative description](imagens/diagrama1.jpeg)
 
 ## Regras de negócio adicionais (Restrições)
 
