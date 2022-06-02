@@ -215,17 +215,6 @@ Não existem entidades fracas
 ## Normalização do Esquema Relacional
 
 
-| Nome do funcionario | Número de identificação | Secção      | Turno |
-| ------------------- | ----------------------  | ----------- | ----- |        
-| Maria Augusta       |             1           | Maquilhagem | Manhã |
-| ------------------- | ----------------------  | ----------- | ----- |
-| Ana Soares          |             2           | Maquilhagem | Manhã |
-| ------------------- | ----------------------  | ----------- | ----- |
-| Joana Carvalho      |             3           | Maquilhagem | Tarde |
-| ------------------- | ----------------------  | ----------- | ----- |
-| Claúdio Ramos       |             4           | Maquilhagem | Tarde |
-| ------------------- | ----------------------  | ----------- | ----- |
-| Inês Batista        |             5           | Maquilhagem | Tarde |
 
 
 
