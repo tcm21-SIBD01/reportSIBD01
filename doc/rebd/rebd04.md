@@ -5,7 +5,7 @@
 
 ### Tabelas 
 
-![An alternative description](imagens/tabelas.png)
+![An alternative description](imagens/tabelas.jpeg)
 
 
 
