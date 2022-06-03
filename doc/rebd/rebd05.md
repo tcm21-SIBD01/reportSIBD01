@@ -8,11 +8,17 @@ USE `mydb` ;
  Table `mydb`.`Funcionario`
 
 CREATE TABLE IF NOT EXISTS `mydb`.`Funcionario` (
+
   `n.id` INT NOT NULL AUTO_INCREMENT,
+  
   `nome` VARCHAR(45) NOT NULL,
+  
   `morada` VARCHAR(45) NOT NULL,
+  
   `telefone` INT NOT NULL,
+  
   PRIMARY KEY (`n.id`))
+  
 ENGINE = InnoDB;
 
 
