@@ -63,6 +63,7 @@ Fornecedor (_id, nome, tipoStock, telefone*)
 Produto (_codigo, nome, tipoProduto, validade)
 
 Entrega (_tipoProduto, validade, reserva, quantidade
+#_id -> Fornecedor)
 
 Precisade ( #_n.id -> Funcionario, #_tipoFormacao -> Formacao)
 
@@ -87,6 +88,7 @@ Fornecedor (_id, nome, tipoStock, telefone*)
 Produto (_codigo, nome, tipoProduto, validade)
 
 Entrega (_tipoProduto, validade, reserva, quantidade
+#_id -> Fornecedor)
 
 Precisade (#_n.id -> Funcionario, #_tipoFormacao -> Formacao)
 
@@ -115,6 +117,7 @@ Fornecedor (_id, nome, tipoStock, telefone*)
 Produto (_codigo, nome, tipoProduto, validade)
 
 Entrega (_tipoProduto, validade, reserva, quantidade
+#_id -> Fornecedor)
 
 Precisade (#_n.id -> Funcionario, #_tipoFormacao -> Formacao)
 
