@@ -333,6 +333,26 @@ SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 ![An alternative description](imagens/tabela1.png)
 ![An alternative description](imagens/tabela2.png)
 
+
+#### Mencione o nome do funcionário com o número Id 17:
+
+SELECT nome
+FROM Funcionarios
+WHERE Id= “17”
+
+#### Mencione todos os funcionários da secção reposição:
+
+SELECT nome
+FROM funcionarios
+Where Seccao= “reposiçao”
+
+#### Mencione os funcionários do turno da tarde:
+
+SELECT nome
+FROM funcionarios
+WHERE turno= "tarde"
+
+
 ---
 [< Previous](rebd04.md) | [^ Main](https://github.com/exemploTrabalho/reportSIBD/) | Next >
 :--- | :---: | ---: 
