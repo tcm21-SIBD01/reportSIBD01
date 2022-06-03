@@ -328,7 +328,10 @@ SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 
 ## DML
 
-_(Apresentar exemplos dos pedidos SQL à base de dados que demonstrem o cumprimento dos requisitos identificados. Para cada query apresentar numa breve descrição do requisito que pretende resolver e do resultado espectável.)_
+### Tabela Funcionário
+
+![An alternative description](imagens/tabela1.png)
+![An alternative description](imagens/tabela2.png)
 
 ---
 [< Previous](rebd04.md) | [^ Main](https://github.com/exemploTrabalho/reportSIBD/) | Next >
