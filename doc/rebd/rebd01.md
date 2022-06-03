@@ -9,7 +9,7 @@ Esta empresa é composta por funcionários e secções.
 
 Os funcionários têm um nome, telefone, morada, número de cartão de cidadão e número de identificação de funcionário.
 
-Produtos de maquilhagem, cosméticos, perfumaria, caixa, reposição, gerência, limpeza e fornecedores são as secções que fazem parte desta empresa.  
+Produtos de maquilhagem, cosméticos, perfumaria, caixa, reposição, gerência, limpeza e fornecedores são as secções que fazem parte desta empresa. Os produtos são definidos pelo nome, tipo de produto, codigo do produto e validade.
 
 Os horários dos funcionários são definidos pela secção e pelo seu turno.
 
@@ -19,7 +19,7 @@ Os funcionários recebem o salário.
 
 O salário é definido pelo valor e é fornecido mensalmente.
 
-Os funcionários de caixa, reposição, gerência, limpeza e fornecedores são os únicos que não necessitam de formação especializada na área da cosmética. Todos os funcionários das outras secções necessitam obrigatoriamente de formação nesta área. 
+Os funcionários de caixa, reposição, gerência, limpeza e fornecedores são os únicos que não necessitam de formação especializada na área da cosmética. Todos os funcionários das outras secções necessitam obrigatoriamente de formação nesta área. A formação é definida pelo tipo de formação e o nome da formação. 
 
 Esta empresa tem 3 tipos de fornecedores, um para a maquilhagem, outro para os cosméticos e outro para a perfumaria. Cada fornecedor tem um horário fixo de entrega, sendo entregue sempre de manhã, em que a maquilhagem e os cosméticos são entregues à segunda-feira e a perfumaria é entregue à sexta-feira.
 
