@@ -2,144 +2,127 @@
 
 ## Conversão do Modelo EA para Modelo Relacional
 
-### Passo1: Entidades e Atributos
+Passo1: Entidades e Atributos
+Funcionario (_n.id, nome, morada, nic, telefone*)
 
-Funcionario (nome, *telefone, morada, cc, _nidentificacao)
+Formacao (_tipoFormacao, nomeFormacao)
 
-Seccao (maquilhagem, cosmetico, perfumaria, caixa, reposiçao, gerencia, limpeza, fornecedores) 
+Turno (_parteDia, hora)
 
-Fornecedor (maquilhagem, comestico, perfumaria)
+Horario (_diaSemana, horaFim, horaInicio)
 
-Horario (horafim, horainicio, diasemana)
+Seccao (_gerencia, cosmético, fornecedor, reposição, caixa, perfumaria, limpeza, maquilhagem)
 
-Entrega (_tipoproduto, validade, reserva, quantidade)
+Fornecedor (_id, nome, tipoStock, telefone*)
 
-Produto(maquilhagem, cosmetico, perfumaria)
+Produto (_codigo, nome, tipoProduto, validade)
 
-Turno (manha, tarde, noite)
+Entrega(_tipoProduto, validade, reserva, quantidade)
 
-Formacao (maquilhagem, cosmetica, perfumaria)
+Passo2: Associações 1:1
+Não existe associações de carnalidade 1:1
 
+Passo3: Associações 1:N
 
+Funcionario (_n.id, nome, morada, nic, telefone*
+#_parteDia -> Turno)
 
-### Passo2: Associações 1:1
+Formacao (_tipoFormacao, nomeFormacao)
 
-Não existem associações com cardinalidade 1:1
+Turno (_parteDia, hora
+#_gerencia -> Turno, #_diaSemana -> Horario)
 
+Horario (_diaSemana, horaFim, horaInicio)
 
+Seccao (_gerencia, cosmético, fornecedor, reposição, caixa, perfumaria, limpeza, maquilhagem)
 
-### Passo3: Associações 1:N
-Funcionario (nome, *telefone, morada, cc, _nidentificacao
-#manha -> Turno, #tarde -> Turno, #noite -> Turno)
+Fornecedor (_id, nome, tipoStock, telefone*)
 
-Seccao (maquilhagem, cosmetico, perfumaria, caixa, reposiçao, gerencia, limpeza, fornecedores) 
+Produto (_codigo, nome, tipoProduto, validade)
 
-Fornecedor (maquilhagem, comestico, perfumaria)
+Entrega (_tipoProduto, validade, reserva, quantidade
+#_id -> Fornecedor)
 
-Horario (horafim, horainicio, diasemana)
+Passo4: Associações N:M
 
-Entrega (_tipoproduto, validade, reserva, quantidade
-#maquilhagem -> Fornecedor, #cosmetico -> Fornecedor, #perfumaria -> Fornecedor)
+Funcionario (_n.id, nome, morada, nic, telefone*
+#_parteDia -> Turno)
 
-Produto(maquilhagem, cosmetico, perfumaria)
+Formacao (_tipoFormacao, nomeFormacao)
 
-Turno (manha, tarde, noite
-#maquilhagem -> Seccao, #cosmetico -> Seccao, #perfumaria-> Seccao, #caixa-> Seccao, #reposicao -> Seccao, #gerencia -> Seccao, #limpeza -> Seccao, #fornecedor -> Seccao, #horafim -> Horario, #horainicio -> Horario, #diasemana -> Horario)
+Turno (_parteDia, hora
+#_gerencia -> Turno, #_diaSemana -> Horario)
 
-Formacao (maquilhagem, cosmetica, perfumaria)
+Horario (_diaSemana, horaFim, horaInicio)
 
+Seccao (_gerencia, cosmético, fornecedor, reposição, caixa, perfumaria, limpeza, maquilhagem)
 
+Fornecedor (_id, nome, tipoStock, telefone*)
 
-### Passo4: Associações N:M
+Produto (_codigo, nome, tipoProduto, validade)
 
-Funcionario (nome, *telefone, morada, cc, _nidentificacao
-#manha -> Turno, #tarde -> Turno, #noite -> Turno)
+Entrega (_tipoProduto, validade, reserva, quantidade
 
-Seccao (maquilhagem, cosmetico, perfumaria, caixa, reposiçao, gerencia, limpeza, fornecedores) 
+Precisade ( #_n.id -> Funcionario, #_tipoFormacao -> Formacao)
 
-Fornecedor (maquilhagem, comestico, perfumaria)
+Envia (#_tipoProduto -> Entrega, #_codigo -> Produto)
 
-Horario (horafim, horainicio, diasemana)
+Passo5: Atributo Multivalor
+Funcionario (_n.id, nome, morada, nic, telefone*
+#_parteDia -> Turno)
 
-Entrega (_tipoproduto, validade, reserva, quantidade
-#maquilhagem -> Fornecedor, #cosmetico -> Fornecedor, #perfumaria -> Fornecedor)
+Formacao (_tipoFormacao, nomeFormacao)
 
-Produto(maquilhagem, cosmetico, perfumaria)
+Turno (_parteDia, hora
+#_gerencia -> Turno, #_diaSemana -> Horario)
 
-Turno (manha, tarde, noite
-#maquilhagem -> Seccao, #cosmetico -> Seccao, #perfumaria-> Seccao, #caixa-> Seccao, #reposicao -> Seccao, #gerencia -> Seccao, #limpeza -> Seccao, #fornecedor -> Seccao, #horafim -> Horario, #horainicio -> Horario, #diasemana -> Horario)
+Horario (_diaSemana, horaFim, horaInicio)
 
-Formacao (maquilhagem, cosmetica, perfumaria)
+Seccao (_gerencia, cosmético, fornecedor, reposição, caixa, perfumaria, limpeza, maquilhagem)
 
-PrecisaDe (#_nidentificacao -> Funcionario, #maquilhagem -> Formacao, #cosmetica -> Formacao, #perfumaria -> Formacao)
+Fornecedor (_id, nome, tipoStock, telefone*)
 
-Envia ( #maquilhagem -> Produto, #cosmetica -> Produro, #perfumaria -> Produto, #tipoproduto -> Entrega)
+Produto (_codigo, nome, tipoProduto, validade)
 
+Entrega (_tipoProduto, validade, reserva, quantidade
 
+Precisade (#_n.id -> Funcionario, #_tipoFormacao -> Formacao)
 
-### Passo5: Atributo Multivalor
+Envia (#_tipoProduto -> Entrega, #_codigo -> Produto)
 
-Funcionario (nome, *telefone, morada, cc, _nidentificacao
-#manha -> Turno, #tarde -> Turno, #noite -> Turno)
+Contacto (#_n.id -> Funcionario, #_id -> Fornecedor, telefone)
+Passo6: Associação ternária
 
-Seccao (maquilhagem, cosmetico, perfumaria, caixa, reposiçao, gerencia, limpeza, fornecedores) 
+Funcionario (_n.id, nome, morada, nic, telefone*
+#_parteDia -> Turno)
 
-Fornecedor (maquilhagem, comestico, perfumaria)
+Formacao (_tipoFormacao, nomeFormacao)
 
-Horario (horafim, horainicio, diasemana)
+Turno (_parteDia, hora
+#_gerencia -> Turno, #_diaSemana -> Horario)
 
-Entrega (_tipoproduto, validade, reserva, quantidade
-#maquilhagem -> Fornecedor, #cosmetico -> Fornecedor, #perfumaria -> Fornecedor)
+Horario (_diaSemana, horaFim, horaInicio)
 
-Produto(maquilhagem, cosmetico, perfumaria)
+Seccao (_gerencia, cosmético, fornecedor, reposição, caixa, perfumaria, limpeza, maquilhagem)
 
-Turno (manha, tarde, noite
-#maquilhagem -> Seccao, #cosmetico -> Seccao, #perfumaria-> Seccao, #caixa-> Seccao, #reposicao -> Seccao, #gerencia -> Seccao, #limpeza -> Seccao, #fornecedor -> Seccao, #horafim -> Horario, #horainicio -> Horario, #diasemana -> Horario)
+Fornecedor (_id, nome, tipoStock, telefone*)
 
-Formacao (maquilhagem, cosmetica, perfumaria)
+Produto (_codigo, nome, tipoProduto, validade)
 
-PrecisaDe (#_nidentificacao -> Funcionario, #maquilhagem -> Formacao, #cosmetica -> Formacao, #perfumaria -> Formacao)
+Entrega (_tipoProduto, validade, reserva, quantidade
 
-Envia ( #maquilhagem -> Produto, #cosmetica -> Produro, #perfumaria -> Produto, #tipoproduto -> Entrega)
+Precisade (#_n.id -> Funcionario, #_tipoFormacao -> Formacao)
 
-Contacto (#_nidentificacao -> Funcionario, telefone)
+Envia (#_tipoProduto -> Entrega, #_codigo -> Produto)
 
+Contacto (#_n.id -> Funcionario, #_id -> Fornecedor, telefone)
+Tem ( #_id -> Fornecedor, #_gerencia -> Seccao, #_diaSemana ->Horario)
 
+Passo7: Entidades Fracas
 
-### Passo 6: Associação ternária
+Não existe Entidades Fracas
+![image](https://user-images.githubusercontent.com/96250970/171851994-412dbdd1-0b5f-4072-8eac-7c0a81f0731b.png)
 
-Funcionario (nome, *telefone, morada, cc, _nidentificacao
-#manha -> Turno, #tarde -> Turno, #noite -> Turno)
-
-Seccao (maquilhagem, cosmetico, perfumaria, caixa, reposiçao, gerencia, limpeza, fornecedores) 
-
-Fornecedor (maquilhagem, comestico, perfumaria)
-
-Horario (horafim, horainicio, diasemana)
-
-Entrega (_tipoproduto, validade, reserva, quantidade
-#maquilhagem -> Fornecedor, #cosmetico -> Fornecedor, #perfumaria -> Fornecedor)
-
-Produto(maquilhagem, cosmetico, perfumaria)
-
-Turno (manha, tarde, noite
-#maquilhagem -> Seccao, #cosmetico -> Seccao, #perfumaria-> Seccao, #caixa-> Seccao, #reposicao -> Seccao, #gerencia -> Seccao, #limpeza -> Seccao, #fornecedor -> Seccao, #horafim -> Horario, #horainicio -> Horario, #diasemana -> Horario)
-
-Formacao (maquilhagem, cosmetica, perfumaria)
-
-PrecisaDe (#_nidentificacao -> Funcionario, #maquilhagem -> Formacao, #cosmetica -> Formacao, #perfumaria -> Formacao)
-
-Envia ( #maquilhagem -> Produto, #cosmetica -> Produro, #perfumaria -> Produto, #tipoproduto -> Entrega)
-
-Contacto (#_nidentificacao -> Funcionario, telefone)
-
-Tem ( #maquilhagem -> Fornecedor, #cosmetico -> Fornecedor, #perfumaria -> Fornecedor, ( #maquilhagem -> Seccao, #cosmetico -> Seccao, #perfumaria -> Seccao, #horafim -> Horario, #horainicio -> Horario, #diasemana -> Horario)
-
- 
-
-### Passo 7: Entidades Fracas
-
-Não existem entidades fracas
 
 
 ## Relacoes 
