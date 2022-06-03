@@ -6,7 +6,7 @@
 
 FUNCIONARIO (nome, *telefone, morada, nic , _nidentificacao)
 
-SECCAO (maquilhagem, cosmetico, perfumaria, caixa, reposicao, gerencia, limpeza, fornecedore) 
+SECCAO (maquilhagem, cosmetico, perfumaria, caixa, reposicao, gerencia, limpeza, fornecedor) 
 
 FORNECEDOR (maquilhagem, cosmetico, perfumaria)
 
@@ -14,11 +14,11 @@ HORARIO (horafim, horainicio, diasemana)
 
 ENTREGA (_tipoproduto, validade, reserva, quantidade)
 
-PRODUTO (maquilhagem, cosmetico, perfumaria)
+PRODUTO (nome,tipoproduto,_codigoproduto,validade )
 
 TURNO (manha, tarde, noite)
 
-FORMACAO (maquilhagem, cosmetica, perfumaria)
+FORMACAO (nome, _tipoformaçao)
 
 
 ### Associacoes:
