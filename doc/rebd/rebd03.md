@@ -121,7 +121,6 @@ Tem ( #_id -> Fornecedor, #_gerencia -> Seccao, #_diaSemana ->Horario)
 Passo7: Entidades Fracas
 
 Não existe Entidades Fracas
-![image](https://user-images.githubusercontent.com/96250970/171851994-412dbdd1-0b5f-4072-8eac-7c0a81f0731b.png)
 
 
 
