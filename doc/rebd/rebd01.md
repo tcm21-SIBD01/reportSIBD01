@@ -19,7 +19,7 @@ Os funcionários recebem o salário.
 
 O salário é definido pelo valor e é fornecido mensalmente.
 
-Os funcionários de caixa, reposição, gerência, limpeza e fornecedores são os únicos que não necessitam de formação especializada na área da cosmética. Todos os funcionários das outras secções necessitam obrigatoriamente de formação nesta área. A formação é definida pelo tipo de formação e o nome da formação. 
+Os funcionários de caixa, reposição, gerência, limpeza e fornecedores são os únicos que não necessitam de formação especializada na área da cosmética. Todos os funcionários das outras secções necessitam obrigatoriamente de formação nesta área. A formação é definida pelo tipo de formação e o nome da formação. Cada fornecedor tem um numero de identificaçao, tipo de stock e telefone. 
 
 Esta empresa tem 3 tipos de fornecedores, um para a maquilhagem, outro para os cosméticos e outro para a perfumaria. Cada fornecedor tem um horário fixo de entrega, sendo entregue sempre de manhã, em que a maquilhagem e os cosméticos são entregues à segunda-feira e a perfumaria é entregue à sexta-feira.
 
