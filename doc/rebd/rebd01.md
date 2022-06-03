@@ -13,11 +13,7 @@ Produtos de maquilhagem, cosméticos, perfumaria, caixa, reposição, gerência,
 
 Os horários dos funcionários são definidos pela secção e pelo seu turno.
 
-Turno é composto por turno da manhã, da tarde e de noite.
-
-Os funcionários recebem o salário. 
-
-O salário é definido pelo valor e é fornecido mensalmente.
+Turno é composto pela parte do dia e  hora.
 
 Os funcionários de caixa, reposição, gerência, limpeza e fornecedores são os únicos que não necessitam de formação especializada na área da cosmética. Todos os funcionários das outras secções necessitam obrigatoriamente de formação nesta área. A formação é definida pelo tipo de formação e o nome da formação. Cada fornecedor tem um numero de identificaçao, tipo de stock e telefone. 
 
