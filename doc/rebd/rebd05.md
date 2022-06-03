@@ -5,9 +5,8 @@
 CREATE SCHEMA IF NOT EXISTS `mydb` DEFAULT CHARACTER SET utf8 ;
 USE `mydb` ;
 
--- -----------------------------------------------------
--- Table `mydb`.`Funcionario`
--- -----------------------------------------------------
+ Table `mydb`.`Funcionario`
+
 CREATE TABLE IF NOT EXISTS `mydb`.`Funcionario` (
   `n.id` INT NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(45) NOT NULL,
@@ -17,9 +16,8 @@ CREATE TABLE IF NOT EXISTS `mydb`.`Funcionario` (
 ENGINE = InnoDB;
 
 
--- -----------------------------------------------------
--- Table `mydb`.`Formacao`
--- -----------------------------------------------------
+ Table `mydb`.`Formacao`
+ 
 CREATE TABLE IF NOT EXISTS `mydb`.`Formacao` (
   `tipoFormacao` VARCHAR(45) NOT NULL,
   `nomeFormacao` VARCHAR(45) NOT NULL,
@@ -27,9 +25,8 @@ CREATE TABLE IF NOT EXISTS `mydb`.`Formacao` (
 ENGINE = InnoDB;
 
 
--- -----------------------------------------------------
--- Table `mydb`.`Turno`
--- -----------------------------------------------------
+Table `mydb`.`Turno`
+
 CREATE TABLE IF NOT EXISTS `mydb`.`Turno` (
   `parteDia` VARCHAR(45) NOT NULL,
   `hora` INT NOT NULL,
@@ -44,9 +41,9 @@ CREATE TABLE IF NOT EXISTS `mydb`.`Turno` (
 ENGINE = InnoDB;
 
 
--- -----------------------------------------------------
--- Table `mydb`.`Entrega`
--- -----------------------------------------------------
+
+ Table `mydb`.`Entrega`
+
 CREATE TABLE IF NOT EXISTS `mydb`.`Entrega` (
   `tipoProduto` INT NOT NULL AUTO_INCREMENT,
   `validade` INT NOT NULL,
@@ -56,9 +53,9 @@ CREATE TABLE IF NOT EXISTS `mydb`.`Entrega` (
 ENGINE = InnoDB;
 
 
--- -----------------------------------------------------
--- Table `mydb`.`Fornecedor`
--- -----------------------------------------------------
+
+ Table `mydb`.`Fornecedor`
+
 CREATE TABLE IF NOT EXISTS `mydb`.`Fornecedor` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(45) NOT NULL,
@@ -75,9 +72,9 @@ CREATE TABLE IF NOT EXISTS `mydb`.`Fornecedor` (
 ENGINE = InnoDB;
 
 
--- -----------------------------------------------------
--- Table `mydb`.`horario`
--- -----------------------------------------------------
+
+ Table `mydb`.`horario`
+
 CREATE TABLE IF NOT EXISTS `mydb`.`horario` (
   `diaSemana` VARCHAR(45) NOT NULL,
   `horaFim` INT NOT NULL,
@@ -101,9 +98,9 @@ CREATE TABLE IF NOT EXISTS `mydb`.`horario` (
 ENGINE = InnoDB;
 
 
--- -----------------------------------------------------
--- Table `mydb`.`seccao`
--- -----------------------------------------------------
+
+ Table `mydb`.`seccao`
+
 CREATE TABLE IF NOT EXISTS `mydb`.`seccao` (
   `gerencia` INT NOT NULL AUTO_INCREMENT,
   `cosmetico` VARCHAR(45) NOT NULL,
@@ -131,9 +128,9 @@ CREATE TABLE IF NOT EXISTS `mydb`.`seccao` (
 ENGINE = InnoDB;
 
 
--- -----------------------------------------------------
--- Table `mydb`.`Produto`
--- -----------------------------------------------------
+
+ Table `mydb`.`Produto`
+
 CREATE TABLE IF NOT EXISTS `mydb`.`Produto` (
   `codigo` INT NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(45) NOT NULL,
@@ -143,9 +140,9 @@ CREATE TABLE IF NOT EXISTS `mydb`.`Produto` (
 ENGINE = InnoDB;
 
 
--- -----------------------------------------------------
--- Table `mydb`.`Formacao_has_Funcionario`
--- -----------------------------------------------------
+
+ Table `mydb`.`Formacao_has_Funcionario`
+
 CREATE TABLE IF NOT EXISTS `mydb`.`Formacao_has_Funcionario` (
   `Formacao_tipoFormacao` VARCHAR(45) NOT NULL,
   `Funcionario_n.id` INT NOT NULL,
@@ -165,9 +162,9 @@ CREATE TABLE IF NOT EXISTS `mydb`.`Formacao_has_Funcionario` (
 ENGINE = InnoDB;
 
 
--- -----------------------------------------------------
--- Table `mydb`.`Entrega_has_Produto`
--- -----------------------------------------------------
+
+ Table `mydb`.`Entrega_has_Produto`
+
 CREATE TABLE IF NOT EXISTS `mydb`.`Entrega_has_Produto` (
   `Entrega_tipoProduto` INT NOT NULL,
   `Produto_codigo` INT NOT NULL,
