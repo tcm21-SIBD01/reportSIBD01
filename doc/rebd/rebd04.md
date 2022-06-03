@@ -3,6 +3,10 @@
 
 ## Relações
 
+### Tabelas 
+
+![An alternative description](imagens/tabelas.png)
+
 
 
 ## Vistas
