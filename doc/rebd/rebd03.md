@@ -2,7 +2,8 @@
 
 ## Conversão do Modelo EA para Modelo Relacional
 
-Passo1: Entidades e Atributos
+### Passo 1: Entidades e Atributos
+
 Funcionario (_n.id, nome, morada, nic, telefone*)
 
 Formacao (_tipoFormacao, nomeFormacao)
@@ -19,10 +20,10 @@ Produto (_codigo, nome, tipoProduto, validade)
 
 Entrega(_tipoProduto, validade, reserva, quantidade)
 
-Passo2: Associações 1:1
+### Passo 2: Associações 1:1
 Não existe associações de carnalidade 1:1
 
-Passo3: Associações 1:N
+#### Passo 3: Associações 1:N
 
 Funcionario (_n.id, nome, morada, nic, telefone*
 #_parteDia -> Turno)
@@ -43,7 +44,7 @@ Produto (_codigo, nome, tipoProduto, validade)
 Entrega (_tipoProduto, validade, reserva, quantidade
 #_id -> Fornecedor)
 
-Passo4: Associações N:M
+### Passo 4: Associações N:M
 
 Funcionario (_n.id, nome, morada, nic, telefone*
 #_parteDia -> Turno)
@@ -67,7 +68,8 @@ Precisade ( #_n.id -> Funcionario, #_tipoFormacao -> Formacao)
 
 Envia (#_tipoProduto -> Entrega, #_codigo -> Produto)
 
-Passo5: Atributo Multivalor
+### Passo 5: Atributo Multivalor
+
 Funcionario (_n.id, nome, morada, nic, telefone*
 #_parteDia -> Turno)
 
@@ -91,7 +93,10 @@ Precisade (#_n.id -> Funcionario, #_tipoFormacao -> Formacao)
 Envia (#_tipoProduto -> Entrega, #_codigo -> Produto)
 
 Contacto (#_n.id -> Funcionario, #_id -> Fornecedor, telefone)
-Passo6: Associação ternária
+
+
+### Passo 6: Associação ternária
+
 
 Funcionario (_n.id, nome, morada, nic, telefone*
 #_parteDia -> Turno)
@@ -118,7 +123,8 @@ Envia (#_tipoProduto -> Entrega, #_codigo -> Produto)
 Contacto (#_n.id -> Funcionario, #_id -> Fornecedor, telefone)
 Tem ( #_id -> Fornecedor, #_gerencia -> Seccao, #_diaSemana ->Horario)
 
-Passo7: Entidades Fracas
+
+### Passo 7: Entidades Fracas
 
 Não existe Entidades Fracas
 
