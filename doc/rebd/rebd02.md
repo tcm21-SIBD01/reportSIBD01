@@ -16,7 +16,7 @@ ENTREGA (_tipoproduto, validade, reserva, quantidade)
 
 PRODUTO (nome,tipoproduto,_codigoproduto,validade )
 
-TURNO (_partedia, hora)
+TURNO (partedia, hora)
 
 FORMACAO (nome, _tipoformaçao)
 
