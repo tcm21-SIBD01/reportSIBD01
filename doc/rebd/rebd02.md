@@ -39,7 +39,7 @@ realiza (FORNECEDOR, ENTREGA) 1:N P/T
 
 ### Diagrama 
 
-![An alternative description](imagens/diagrama1.jpeg)
+![An alternative description](imagens/diagrama1.png)
 
 ## Regras de negócio adicionais (Restrições)
 
