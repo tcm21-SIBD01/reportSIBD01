@@ -121,6 +121,7 @@ Precisade (#_n.id -> Funcionario, #_tipoFormacao -> Formacao)
 Envia (#_tipoProduto -> Entrega, #_codigo -> Produto)
 
 Contacto (#_n.id -> Funcionario, #_id -> Fornecedor, telefone)
+
 Tem ( #_id -> Fornecedor, #_gerencia -> Seccao, #_diaSemana ->Horario)
 
 
