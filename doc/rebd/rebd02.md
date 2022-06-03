@@ -6,9 +6,9 @@
 
 FUNCIONARIO (nome, *telefone, morada, nic , _nidentificacao)
 
-SECCAO (maquilhagem, cosmetico, perfumaria, caixa, reposicao, gerencia, limpeza, fornecedor) 
+SECCAO (maquilhagem, cosmetico, perfumaria, caixa, reposicao, _gerencia, limpeza, fornecedor) 
 
-FORNECEDOR (maquilhagem, cosmetico, perfumaria)
+FORNECEDOR (nome, _nid, tipostock, telefone*)
 
 HORARIO (horafim, horainicio, diasemana)
 
