@@ -22,11 +22,6 @@ Esta empresa tem 3 tipos de fornecedores, um para a maquilhagem, outro para os c
 Cada entrega de stock tem uma identificação dos produtos entregues, quanto ao tipo de produto, quantidade, validade e reserva. 
 
 
-## Modelação do problema
-
-Com o sistema que criamos pretendemos solucionar o problema da quantidade de vendas na empresa. Sendo que apenas o gerente pode aceder ao sistema. 
-
-
 
 ## Descrição dos requisitos do utilizador
 
