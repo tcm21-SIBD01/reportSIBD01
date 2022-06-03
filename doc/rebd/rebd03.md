@@ -134,71 +134,55 @@ Não existe Entidades Fracas
 ## Relacoes 
 
 
-|Funcionario|         |      |  |               |              |               |          |
-|-----------|-------- |------|--|---------------|--------------|---------------|----------|
-|nome       |*telefone|morada|cc|_nidentificacao|#manha->Turno|#manha->Turno|#noite->Turno|
+|Funcionario|    |      |   |         |                   |
+|-----------|----|------|---|---------|-------------------|
+|_n.id      |nome|morada|nic|telefone*|#_parteDia -> Turno|
 
-|Seccao     |         |          |     |         |        |       |          |             
-|-----------|---------|----------|-----|---------|--------|-------|----------|
-|maquilhagem|cosmetica|perfumaria|caixa|reposicao|gerencia|limpeza|fornecedor|
+|Formacao     |            |    
+|-------------|------------|
+|_tipoFormacao|nomeFormacao|
 
-|Fornecedor |         |          |            
-|-----------|---------|----------|
-|maquilhagem|cosmetica|perfumaria|
+|Turno    |    |                 |                    |
+|---------|----|-----------------|--------------------|
+|_parteDia|hora|#_gerencia->Turno|#_diaSemana->Horario|
 
-|Horario|          |         |      
-|-------|----------|---------|
-|horafim|horainicio|diasemana|
+|Horario   |       |          |      
+|----------|-------|----------|
+|_diaSemana|horaFim|horaInicio|
 
-|Entrega     |        |       |          |                        |                      |
-|------------|--------|-------|----------|------------------------|----------------------|
-|_tipoproduto|validade|reverva|quantidade|#maquilhagem->Fornecedor|#cosmetico->Fornecedor|
+|Seccao   |         |          |         |                        |           |
+|---------|---------|----------|---------|------------------------|-----------|
+|_gerencia|cosmetico|fornecedor|reposicao|caixa|perfumaria|limpeza|maquilhagem|
 
-|Entrega                  |      
-|-------------------------|
-|#perfumaria -> Fornecedor|
-
-
-|Produto    |         |          |      
-|-----------|---------|----------|
-|maquilhagem|cosmetico|perfumaria|
-
-|Turno|     |     |                    |                  |                   |           
-|-----|-----|-----|--------------------|------------------|-------------------|
-|manha|tarde|noite|#maquilhagem->Seccao|#cosmetico->Seccao|#perfumaria->Seccao|
+|Fornecedor|    |         |         |
+|----------|----|---------|---------|
+|_id       |nome|tipoStock|telefone*|
 
 
-|Turno         |                  |                 |                |           
-|--------------|------------------|-----------------|----------------|
-|#caixa->Seccao|#reposicao->Seccao|#gerencia->Seccao|#limpeza->Seccao|
+|Produto|    |           |        |
+|-------|----|-----------|--------|
+|_codigo|nome|tipoProduto|validade|
 
-|Turno              |                 |                    |                   |
-|-------------------|-----------------|--------------------|-------------------|
-|#fornecedor->Seccao|#horafim->Horario|#horainicio->Horario|#diasemana->Horario|
+|Entrega     |        |       |          |             
+|------------|--------|-------|----------|
+|_tipoProduto|validade|reserva|quantidade|
 
-|Formacao   |         |          |      
-|-----------|---------|----------|
-|maquilhagem|cosmetico|perfumaria|
 
-|PrecisaDe                    |                      |                       |                  |
-|-----------------------------|----------------------|--------------------|---------------------|
-|#_nidentificacao->Funcionario|#maquilhagem->Formacao|#cosmetica->Formacao|#perfumaria->Formacao|
+|PrecisaDe          |                        |
+|-------------------|------------------------|
+|#_n.id->Funcionario|#_tipoFormacao->Formacao|
 
-|Envia                |                   |                    |                        |       
-|---------------------|-------------------|--------------------|------------------------|
-|#maquilhagem->Produto|#cosmetica->Produto|#perfumaria->Produto|#_tipoproduto -> Entrega|
+|Envia                 |                 |        
+|----------------------|-----------------|
+|#_tipoProduto->Entrega|#_codigo->Produto|
 
-|Contacto                     |        |      
-|-----------------------------|--------|
-|#_nidentificacao->Funcionario|telefone|
+|Contacto           |                 |        |
+|-------------------|-----------------|--------|
+|#_n.id->Funcionario|#_codigo->Produto|telefone|
 
-|Tem                     |                      |                       |                    |  
-|------------------------|----------------------|-----------------------|--------------------|
-|#maquilhagem->Fornecedor|#cosmetico->Fornecedor|#perfumaria->Fornecedor|#maquilhagem->Seccao|
-
-|Tem                |                  |                 |                    |                   | 
-|-------------------|------------------|-----------------|--------------------|-------------------|
-|#cosmetico->Seccao#|perfumaria->Seccao|#horafim->Horario|#horainicio->Horario|#diasemana->Horario|
+|Tem             |                  |                     |             
+|----------------|------------------|---------------------|
+|#_id->Fornecedor|#_gerencia->Seccao|#p_diaSemana->Horario|
 
 
 ## Normalização do Esquema Relacional
