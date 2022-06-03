@@ -166,9 +166,9 @@ Não existe Entidades Fracas
 |-------|----|-----------|--------|
 |_codigo|nome|tipoProduto|validade|
 
-|Entrega     |        |       |          |             
-|------------|--------|-------|----------|
-|_tipoProduto|validade|reserva|quantidade|
+|Entrega     |        |       |          |                |
+|------------|--------|-------|----------|----------------|
+|_tipoProduto|validade|reserva|quantidade|#_id->Fornecedor|
 
 
 |PrecisaDe          |                        |
