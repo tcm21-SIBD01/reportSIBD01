@@ -33,7 +33,7 @@ definidoPor (TURNO, HORARIO) N:M T/P
 
 tem (FORNECEDOR, HORARIO ) N:M T/P/P
 
-envia (ENTREGA, PRODUTO) M:N P/T
+envia (ENTREGA, PRODUTO) N:M P/T
 
 realiza (FORNECEDOR, ENTREGA) 1:N P/T
 
