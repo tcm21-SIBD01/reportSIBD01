@@ -16,7 +16,7 @@ ENTREGA (_ numeroentrega _ , validade, reserva, quantidade)
 
 PRODUTO (nome,tipoproduto, _ codigo _ ,validade )
 
-TURNO (_id_ , partedia ,hora)
+TURNO (_ i d_ , partedia ,hora)
 
 FORMACAO (nome, _ tipoformaçao _ )
 
