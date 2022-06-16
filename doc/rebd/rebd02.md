@@ -8,13 +8,13 @@ FUNCIONARIO (nome, {telefone}, morada, nic , _ nidentificacao _)
 
 SECCAO (nome, _ id _ ) 
 
-FORNECEDOR (nome, _nid, {telefone})
+FORNECEDOR (nome, _ nid _ , {telefone})
 
 HORARIO (_ id _, horafim, horainicio, diasemana)
 
 ENTREGA (_ numeroentrega _ , validade, reserva, quantidade)
 
-PRODUTO (nome,tipoproduto, _codigo_ ,validade )
+PRODUTO (nome,tipoproduto, _ codigo _ ,validade )
 
 TURNO (_id_ , partedia ,hora)
 
