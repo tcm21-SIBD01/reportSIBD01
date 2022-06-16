@@ -4,21 +4,21 @@
 
 ### Entidades: 
 
-FUNCIONARIO (nome, *telefone, morada, nic , _nidentificacao)
+FUNCIONARIO (nome, {telefone}, morada, nic , _ nidentificacao _)
 
-SECCAO (maquilhagem, cosmetico, perfumaria, caixa, reposicao, _gerencia, limpeza, fornecedor) 
+SECCAO (nome, _ id _ ) 
 
-FORNECEDOR (nome, _nid, tipostock, telefone*)
+FORNECEDOR (nome, _nid, {telefone})
 
-HORARIO (horafim, horainicio, diasemana)
+HORARIO (_ id _, horafim, horainicio, diasemana)
 
-ENTREGA (_tipoproduto, validade, reserva, quantidade)
+ENTREGA (_ numeroentrega _ , validade, reserva, quantidade)
 
-PRODUTO (nome,tipoproduto,_codigoproduto,validade )
+PRODUTO (nome,tipoproduto, _codigo_ ,validade )
 
-TURNO (partedia, _hora)
+TURNO (_id_ , partedia ,hora)
 
-FORMACAO (nome, _tipoformaçao)
+FORMACAO (nome, _ tipoformaçao _ )
 
 
 ### Associacoes:
@@ -27,9 +27,9 @@ possui (FUNCIONARIO,TURNO) N:1 T/P
 
 precisaDe (FUNCIONARIO, FORMACAO) M:N P/P
 
-dependeDe (TURNO, SECCAO) N:1 P/P
+dependeDe (TURNO, SECCAO) N:M P/P
 
-definidoPor (TURNO, HORARIO) N:1 T/P
+definidoPor (TURNO, HORARIO) N:M T/P
 
 tem (FORNECEDOR, SECCAO , HORARIO ) N:1:1 T/P/P
 
