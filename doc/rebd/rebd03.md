@@ -26,7 +26,7 @@ Não existe associações com carnalidade 1:1
 
 ### Passo 3: Associações 1:N
 
-Funcionario (nome, morada, nic, _nidentificao_
+Funcionario (nome, morada, nic, _nidentificao_,
 #_id_ -> Turno)
 
 Seccao (nome, _id_)
@@ -35,7 +35,7 @@ Fornecedor (nome, _nid_)
 
 Horario (_id_, horafim, horainicio, diasemana)
 
-Entrega (_numeroentrega_, validade, reserva, quantidade
+Entrega (_numeroentrega_, validade, reserva, quantidade,
 #_nid_ -> Fornecedor)
 
 Produto (nome, tipoproduto, _codigo_, validade)
@@ -47,7 +47,7 @@ Formacao (nome, _tipoformacao_)
 
 ### Passo 4: Associações N:M
 
-Funcionario (nome, morada, nic, _nidentificao_
+Funcionario (nome, morada, nic, _nidentificao_,
 #_id_ -> Turno)
 
 Seccao (nome, _id_)
@@ -56,7 +56,7 @@ Fornecedor (nome, _nid_)
 
 Horario (_id_, horafim, horainicio, diasemana)
 
-Entrega (_numeroentrega_, validade, reserva, quantidade
+Entrega (_numeroentrega_, validade, reserva, quantidade,
 #_nid_ -> Fornecedor)
 
 Produto (nome, tipoproduto, _codigo_, validade)
@@ -77,7 +77,7 @@ Envia (#_numeroentrega_ -> Entrega, #_codigo_ -> Produto)
 
 ### Passo 5: Atributo Multivalor
 
-Funcionario (nome, morada, nic, _nidentificao_
+Funcionario (nome, morada, nic, _nidentificao_,
 #_id_ -> Turno)
 
 Seccao (nome, _id_)
@@ -86,7 +86,7 @@ Fornecedor (nome, _nid_)
 
 Horario (_id_, horafim, horainicio, diasemana)
 
-Entrega (_numeroentrega_, validade, reserva, quantidade
+Entrega (_numeroentrega_, validade, reserva, quantidade,
 #_nid_ -> Fornecedor)
 
 Produto (nome, tipoproduto, _codigo_, validade)
