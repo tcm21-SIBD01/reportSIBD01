@@ -4,11 +4,11 @@
 
 ### Entidades: 
 
-FUNCIONARIO (nome, {telefone}, morada, nic , _ nidentificacao _)
+FUNCIONARIO (nome, {telefone (telefonepessoal, telefonecasa)}, morada, nic , _ nidentificacao _)
 
 SECCAO (nome, _ id _ ) 
 
-FORNECEDOR (nome, _ nid _ , {telefone})
+FORNECEDOR (nome, _ nid _ , {telefone (telefonepessoal, telefoneempresa) })
 
 HORARIO (_ id _, horafim, horainicio, diasemana)
 
