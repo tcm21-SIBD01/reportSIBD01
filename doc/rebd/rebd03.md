@@ -69,7 +69,7 @@ PrecisaDe (# _nidentificacao_ -> Funcionario, #_tipoformacao_ -> Formacao)
 
 DependeDe (#_id_ -> Turno, #_id_-> Seccao)
 
-DefinidoPor (#_id_ ->Tuno, #_id_-> Horario)
+DefinidoPor (#_id_ ->Turno, #_id_-> Horario)
 
 Tem (#_nid_-> Fornecedor, # _id_-> Horario)
 
@@ -99,7 +99,7 @@ PrecisaDe (# _nidentificacao_ -> Funcionario, #_tipoformacao_ -> Formacao)
 
 DependeDe (#_id_ -> Turno, #_id_-> Seccao)
 
-DefinidoPor (#_id_ ->Tuno, # _id_-> Horario)
+DefinidoPor (#_id_ ->Turno, # _id_-> Horario)
 
 Tem (#_nid_-> Fornecedor, #_id_-> Horario)
 
@@ -155,21 +155,25 @@ Não existe entidades fracas
 |_tipoformacao_|nome|
 
 
-|PrecisaDe          |                        |
-|-------------------|------------------------|
-|#_n.id->Funcionario|#_tipoFormacao->Formacao|
+|PrecisaDe                      |                          |
+|-------------------------------|--------------------------|
+|#_nidentificacao_ ->Funcionario|#_tipoformacao_ ->Formacao|
 
-|Envia                 |                 |        
-|----------------------|-----------------|
-|#_tipoProduto->Entrega|#_codigo->Produto|
+|DependeDe    |             |        
+|-------------|-------------|
+|#_id_ ->Turno|#_id_->Seccao|
 
-|Contacto           |                 |        |
-|-------------------|-----------------|--------|
-|#_n.id->Funcionario|#_codigo->Produto|telefone|
+|DefinidoPor   |              | 
+|--------------|--------------|
+|#_id_ -> Turno|#_id_->Horario|
 
-|Tem             |                  |                     |             
-|----------------|------------------|---------------------|
-|#_id->Fornecedor|#_gerencia->Seccao|#p_diaSemana->Horario|
+|Envia                      |                   |            
+|---------------------------|-------------------|
+|#_nunmeroentrega_ ->Entrega|#_codigo_ ->Produto|
+
+|Contacto                       |                   |          |  
+|-------------------------------|-------------------|----------|
+|#_nidentificacao_ ->Funcionario|#_nid_ ->Fornecedor|_telefone_|
 
 
 ## Normalização do Esquema Relacional
