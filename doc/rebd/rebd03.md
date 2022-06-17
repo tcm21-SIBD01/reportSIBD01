@@ -2,6 +2,119 @@
 
 ## Conversão do Modelo EA para Modelo Relacional
 
+###Passo 1: Entidades tipo
+
+Funcionario (nome, morada, nic, _nidentificao_)
+
+Seccao (nome, _id_)
+
+Fornecedor (nome, _nid_)
+
+Horario (_id_, horafim, horainicio, diasemana)
+
+Entrega (_numeroentrega_, validade, reserva, quantidade)
+
+Produto (nome, tipoproduto, _codigo_, validade)
+
+Turno (_id_, partedia, hora)
+
+Formacao (nome, _tipoformacao_)
+
+###Passo 2: Associações 1:1
+
+Não existe associações com carnalidade 1:1
+
+###Passo 3: Associações 1:N
+
+Funcionario (nome, morada, nic, _nidentificao_
+#_id_ -> Turno)
+
+Seccao (nome, _id_)
+
+Fornecedor (nome, _nid_)
+
+Horario (_id_, horafim, horainicio, diasemana)
+
+Entrega (_numeroentrega_, validade, reserva, quantidade
+#_nid_ -> Fornecedor)
+
+Produto (nome, tipoproduto, _codigo_, validade)
+
+Turno (_id_, partedia, hora)
+
+Formacao (nome, _tipoformacao_)
+
+
+###Passo 4: Associações N:M
+
+Funcionario (nome, morada, nic, _nidentificao_
+#_id_ -> Turno)
+
+Seccao (nome, _id_)
+
+Fornecedor (nome, _nid_)
+
+Horario (_id_, horafim, horainicio, diasemana)
+
+Entrega (_numeroentrega_, validade, reserva, quantidade
+#_nid_ -> Fornecedor)
+
+Produto (nome, tipoproduto, _codigo_, validade)
+
+Turno (_id_, partedia, hora)
+
+Formacao (nome, _tipoformacao_)
+
+PrecisaDe (# _nidentificacao_ -> Funcionario, #_tipoformacao_ -> Formacao)
+
+DependeDe (#_id_ -> Turno, #_id_-> Seccao)
+
+DefinidoPor (#_id_ ->Tuno, #_id_-> Horario)
+
+Tem (#_nid_-> Fornecedor, # _id_-> Horario)
+
+Envia (#_numeroentrega_ -> Entrega, #_codigo_ -> Produto)
+
+###Passo 5: Atributo Multivalor
+
+Funcionario (nome, morada, nic, _nidentificao_
+#_id_ -> Turno)
+
+Seccao (nome, _id_)
+
+Fornecedor (nome, _nid_)
+
+Horario (_id_, horafim, horainicio, diasemana)
+
+Entrega (_numeroentrega_, validade, reserva, quantidade
+#_nid_ -> Fornecedor)
+
+Produto (nome, tipoproduto, _codigo_, validade)
+
+Turno (_id_, partedia, hora)
+
+Formacao (nome, _tipoformacao_)
+
+PrecisaDe (# _nidentificacao_ -> Funcionario, #_tipoformacao_ -> Formacao)
+
+DependeDe (#_id_ -> Turno, #_id_-> Seccao)
+
+DefinidoPor (#_id_ ->Tuno, # _id_-> Horario)
+
+Tem (#_nid_-> Fornecedor, #_id_-> Horario)
+
+Envia (#_numeroentrega_ -> Entrega, #_codigo_ -> Produto)
+
+Contacto (# _nidentificacao_ -> Funcionario, #_nid_ -> Fornecedor, _telefone_)
+
+###Passo 6: Associações ternárias
+
+Não existe associações ternárias
+
+###Passo 7: Entidades Fracas
+
+Não existe entidades fracas
+
 
 
 
