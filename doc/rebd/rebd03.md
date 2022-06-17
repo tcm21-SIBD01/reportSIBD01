@@ -178,6 +178,22 @@ Não existe entidades fracas
 
 # Normalização do Esquema Relacional
 
+#### Dependências Funcionais:
+
+TURNO (#_ nid  _ ->FUNCIONARIO, _ id _, partedia, hora)
+
+FORMACAO (#_ nid  _ ->FUNCIONARIO, _ tipoformacao _, nome)
+
+SECCAO (#_ id  _ ->TURNO, _ id _, nome)
+
+HORARIO (#_ id  _ ->TURNO, _ id _, horafim, horainicio, diasemana)
+
+HORARIO (#_ nid  _ ->FORNECEDOR, _ id _, horafim, horainicio, diasemana)
+
+PRODUTO (#_ nentrega  _ ->ENTREGA, _ codigo _, nome, tipoproduto, validade)
+
+ENTREGA (#_ nid  _ ->FORNECEDOR, _ codigo _, nome, tipoproduto, validade
+
 ## 1ª Forma Normal (1NF)
 
 Funcionario (_n.id, #nome, morada, nic
