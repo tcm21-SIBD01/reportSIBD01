@@ -121,38 +121,38 @@ Não existe entidades fracas
 ## Relacoes 
 
 
-|Funcionario|    |      |   |         |                   |
-|-----------|----|------|---|---------|-------------------|
-|_n.id      |nome|morada|nic|telefone*|#_parteDia -> Turno|
+|Funcionario   |    |      |   |              |
+|--------------|----|------|---|--------------|
+|_nidenticacao_|nome|morada|nic|#_id_ -> Turno|
 
-|Formacao     |            |    
-|-------------|------------|
-|_tipoFormacao|nomeFormacao|
+|Seccao|    |    
+|------|----|
+|_id_  |nome|
 
-|Turno    |    |                 |                    |
-|---------|----|-----------------|--------------------|
-|_parteDia|hora|#_gerencia->Turno|#_diaSemana->Horario|
+|Fornecedor|    |
+|----------|----|
+|_id_      |nome|
 
-|Horario   |       |          |      
-|----------|-------|----------|
-|_diaSemana|horaFim|horaInicio|
+|Horario|       |          |         |
+|-------|-------|----------|---------|
+|_id_   |horafim|horainicio|diasemana|
 
-|Seccao   |         |          |         |                        |           |
-|---------|---------|----------|---------|------------------------|-----------|
-|_gerencia|cosmetico|fornecedor|reposicao|caixa|perfumaria|limpeza|maquilhagem|
+|Entrega        |        |       |          |                    |
+|---------------|--------|-------|----------|--------------------|
+|_numeroentrega_|validade|reserva|quantidade|#_nid_ -> Fornecedor|
 
-|Fornecedor|    |         |         |
-|----------|----|---------|---------|
-|_id       |nome|tipoStock|telefone*|
+|Produto |    |           |        |
+|--------|----|-----------|--------|
+|_codigo_|nome|tipoproduto|validade|
 
 
-|Produto|    |           |        |
-|-------|----|-----------|--------|
-|_codigo|nome|tipoProduto|validade|
+|Turno|        |    |
+|-----|--------|----|
+|_id_ |partedia|hora|
 
-|Entrega     |        |       |          |                |
-|------------|--------|-------|----------|----------------|
-|_tipoProduto|validade|reserva|quantidade|#_id->Fornecedor|
+|Formacao      |    |
+|--------------|----|
+|_tipoformacao_|nome|
 
 
 |PrecisaDe          |                        |
