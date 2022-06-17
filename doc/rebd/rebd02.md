@@ -4,21 +4,21 @@
 
 ### Entidades: 
 
-FUNCIONARIO (nome, {telefone (telefonepessoal, telefonecasa)}, morada, nic , _ nidentificacao _)
+FUNCIONARIO (nome, {telefone (telefonepessoal, telefonecasa)}, morada, nic , <ins>nidentificacao</ins>)
 
-SECCAO (nome, _ id _ ) 
+SECCAO (nome,<ins>id</ins> ) 
 
-FORNECEDOR (nome, _ nid _ , {telefone (telefonepessoal, telefoneempresa) })
+FORNECEDOR (nome, <ins>nid</ins> , {telefone (telefonepessoal, telefoneempresa) })
 
-HORARIO (_ id _, horafim, horainicio, diasemana)
+HORARIO (<ins>id</ins>, horafim, horainicio, diasemana)
 
-ENTREGA (_ numeroentrega _ , validade, reserva, quantidade)
+ENTREGA (<ins>nentrega</ins> , validade, reserva, quantidade)
 
-PRODUTO (nome,tipoproduto, _ codigo _ ,validade )
+PRODUTO (nome,tipoproduto, <ins>codigo</ins> ,validade )
 
-TURNO (_ i d_ , partedia ,hora)
+TURNO (<ins>id</ins>, partedia ,hora)
 
-FORMACAO (nome, _ tipoformaçao _ )
+FORMACAO (nome, <ins>tipoformacao</ins> )
 
 
 ### Associacoes:
