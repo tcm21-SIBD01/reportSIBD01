@@ -4,21 +4,21 @@
 
 ### Passo 1: Entidades tipo
 
-Funcionario (nome, morada, nic, _nidentificao_)
+Funcionario (nome, morada, nic, _ nidentificao _)
 
-Seccao (nome, _id_)
+Seccao (nome, _ id _)
 
-Fornecedor (nome, _nid_)
+Fornecedor (nome, _ nid _)
 
-Horario (_id_, horafim, horainicio, diasemana)
+Horario (_ id _, horafim, horainicio, diasemana)
 
-Entrega (_numeroentrega_, validade, reserva, quantidade)
+Entrega (_ numeroentrega _, validade, reserva, quantidade)
 
-Produto (nome, tipoproduto, _codigo_, validade)
+Produto (nome, tipoproduto, _ codigo _, validade)
 
-Turno (_id_, partedia, hora)
+Turno (_ id _, partedia, hora)
 
-Formacao (nome, _tipoformacao_)
+Formacao (nome, _ tipoformacao _)
 
 ### Passo 2: Associações 1:1
 
@@ -26,86 +26,86 @@ Não existe associações com carnalidade 1:1
 
 ### Passo 3: Associações 1:N
 
-Funcionario (nome, morada, nic, _nidentificao_,
-#_id_ -> Turno)
+Funcionario (nome, morada, nic, _ nidentificao _,
+#_ id _ -> Turno)
 
-Seccao (nome, _id_)
+Seccao (nome, _ id _)
 
-Fornecedor (nome, _nid_)
+Fornecedor (nome, _ nid _)
 
-Horario (_id_, horafim, horainicio, diasemana)
+Horario (_ id _, horafim, horainicio, diasemana)
 
-Entrega (_numeroentrega_, validade, reserva, quantidade,
-#_nid_ -> Fornecedor)
+Entrega (_ numeroentrega _, validade, reserva, quantidade,
+#_ nid _ -> Fornecedor)
 
-Produto (nome, tipoproduto, _codigo_, validade)
+Produto (nome, tipoproduto, _ codigo _, validade)
 
-Turno (_id_, partedia, hora)
+Turno (_ id _, partedia, hora)
 
-Formacao (nome, _tipoformacao_)
+Formacao (nome, _ tipoformacao _)
 
 
 ### Passo 4: Associações N:M
 
-Funcionario (nome, morada, nic, _nidentificao_,
-#_id_ -> Turno)
+Funcionario (nome, morada, nic, _ nidentificao _,
+#_ id _ -> Turno)
 
-Seccao (nome, _id_)
+Seccao (nome, _ id _)
 
-Fornecedor (nome, _nid_)
+Fornecedor (nome, _ nid _)
 
-Horario (_id_, horafim, horainicio, diasemana)
+Horario (_ id _, horafim, horainicio, diasemana)
 
-Entrega (_numeroentrega_, validade, reserva, quantidade,
-#_nid_ -> Fornecedor)
+Entrega (_ numeroentrega _, validade, reserva, quantidade,
+#_ nid _ -> Fornecedor)
 
-Produto (nome, tipoproduto, _codigo_, validade)
+Produto (nome, tipoproduto, _ codigo _, validade)
 
-Turno (_id_, partedia, hora)
+Turno (_ id _, partedia, hora)
 
-Formacao (nome, _tipoformacao_)
+Formacao (nome, _ tipoformacao _)
 
-PrecisaDe (# _nidentificacao_ -> Funcionario, #_tipoformacao_ -> Formacao)
+PrecisaDe (# _ nidentificacao _ -> Funcionario, #_ tipoformacao _ -> Formacao)
 
-DependeDe (#_id_ -> Turno, #_id_-> Seccao)
+DependeDe (#_ id _ -> Turno, #_ id _-> Seccao)
 
-DefinidoPor (#_id_ ->Turno, #_id_-> Horario)
+DefinidoPor (#_ id _ ->Turno, #_ id _-> Horario)
 
-Tem (#_nid_-> Fornecedor, # _id_-> Horario)
+Tem (#_ nid _-> Fornecedor, # _ id _-> Horario)
 
-Envia (#_numeroentrega_ -> Entrega, #_codigo_ -> Produto)
+Envia (#_ numeroentrega _ -> Entrega, #_ codigo _ -> Produto)
 
 ### Passo 5: Atributo Multivalor
 
-Funcionario (nome, morada, nic, _nidentificao_,
-#_id_ -> Turno)
+Funcionario (nome, morada, nic, _ nidentificao _,
+#_ id _ -> Turno)
 
-Seccao (nome, _id_)
+Seccao (nome, _ id _)
 
-Fornecedor (nome, _nid_)
+Fornecedor (nome, _ nid _)
 
-Horario (_id_, horafim, horainicio, diasemana)
+Horario (_ id _, horafim, horainicio, diasemana)
 
-Entrega (_numeroentrega_, validade, reserva, quantidade,
-#_nid_ -> Fornecedor)
+Entrega (_ numeroentrega _, validade, reserva, quantidade,
+#_ nid _ -> Fornecedor)
 
-Produto (nome, tipoproduto, _codigo_, validade)
+Produto (nome, tipoproduto, _ codigo _, validade)
 
-Turno (_id_, partedia, hora)
+Turno (_ id _, partedia, hora)
 
-Formacao (nome, _tipoformacao_)
+Formacao (nome, _ tipoformacao _)
 
-PrecisaDe (# _nidentificacao_ -> Funcionario, #_tipoformacao_ -> Formacao)
+PrecisaDe (# _ nidentificacao _ -> Funcionario, #_ tipoformacao _ -> Formacao)
 
-DependeDe (#_id_ -> Turno, #_id_-> Seccao)
+DependeDe (#_ id _ -> Turno, #_ id _-> Seccao)
 
-DefinidoPor (#_id_ ->Turno, # _id_-> Horario)
+DefinidoPor (#_ id _ ->Turno, # _ id _-> Horario)
 
-Tem (#_nid_-> Fornecedor, #_id_-> Horario)
+Tem (#_ nid _-> Fornecedor, #_ id _-> Horario)
 
-Envia (#_numeroentrega_ -> Entrega, #_codigo_ -> Produto)
+Envia (#_ numeroentrega _ -> Entrega, #_ codigo _ -> Produto)
 
-Contacto (# _nidentificacao_ -> Funcionario, #_nid_ -> Fornecedor, _telefone_)
+Contacto (# _ nidentificacao _ -> Funcionario, #_ nid _ -> Fornecedor, _ telefone _)
 
 ### Passo 6: Associações ternárias
 
@@ -121,59 +121,59 @@ Não existe entidades fracas
 ## Relacoes 
 
 
-|Funcionario   |    |      |   |              |
-|--------------|----|------|---|--------------|
-|_nidenticacao_|nome|morada|nic|#_id_ -> Turno|
+|Funcionario     |    |      |   |                |
+|----------------|----|------|---|----------------|
+|_ nidenticacao _|nome|morada|nic|#_ id _ -> Turno|
 
-|Seccao|    |    
-|------|----|
-|_id_  |nome|
+|Seccao  |    |    
+|--------|----|
+|_ id _  |nome|
 
-|Fornecedor|    |
-|----------|----|
-|_id_      |nome|
+|Fornecedor  |    |
+|------------|----|
+|_ id _      |nome|
 
 |Horario|       |          |         |
 |-------|-------|----------|---------|
-|_id_   |horafim|horainicio|diasemana|
+|_ id _ |horafim|horainicio|diasemana|
 
-|Entrega        |        |       |          |                    |
-|---------------|--------|-------|----------|--------------------|
-|_numeroentrega_|validade|reserva|quantidade|#_nid_ -> Fornecedor|
+|Entrega          |        |       |          |                      |
+|-----------------|--------|-------|----------|----------------------|
+|_ numeroentrega _|validade|reserva|quantidade|#_ nid _ -> Fornecedor|
 
-|Produto |    |           |        |
-|--------|----|-----------|--------|
-|_codigo_|nome|tipoproduto|validade|
-
-
-|Turno|        |    |
-|-----|--------|----|
-|_id_ |partedia|hora|
-
-|Formacao      |    |
-|--------------|----|
-|_tipoformacao_|nome|
+|Produto   |    |           |        |
+|----------|----|-----------|--------|
+|_ codigo _|nome|tipoproduto|validade|
 
 
-|PrecisaDe                      |                          |
-|-------------------------------|--------------------------|
-|#_nidentificacao_ ->Funcionario|#_tipoformacao_ ->Formacao|
+|Turno  |        |    |
+|-------|--------|----|
+|_ id _ |partedia|hora|
 
-|DependeDe    |             |        
-|-------------|-------------|
-|#_id_ ->Turno|#_id_->Seccao|
+|Formacao        |    |
+|----------------|----|
+|_ tipoformacao _|nome|
 
-|DefinidoPor   |              | 
-|--------------|--------------|
-|#_id_ -> Turno|#_id_->Horario|
 
-|Envia                      |                   |            
-|---------------------------|-------------------|
-|#_nunmeroentrega_ ->Entrega|#_codigo_ ->Produto|
+|PrecisaDe                        |                            |
+|---------------------------------|----------------------------|
+|#_ nidentificacao _ ->Funcionario|#_ tipoformacao _ ->Formacao|
 
-|Contacto                       |                   |          |  
-|-------------------------------|-------------------|----------|
-|#_nidentificacao_ ->Funcionario|#_nid_ ->Fornecedor|_telefone_|
+|DependeDe      |               |        
+|---------------|---------------|
+|#_ id _ ->Turno|#_ id _->Seccao|
+ 
+|DefinidoPor     |                | 
+|----------------|----------------|
+|#_ id _ -> Turno|#_ id _->Horario|
+
+|Envia                        |                     |            
+|-----------------------------|---------------------|
+|#_ nunmeroentrega _ ->Entrega|#_ codigo _ ->Produto|
+
+|Contacto                         |                     |            |  
+|---------------------------------|---------------------|------------|
+|#_ nidentificacao _ ->Funcionario|#_ nid _ ->Fornecedor|_ telefone _|
 
 
 ## Normalização do Esquema Relacional
