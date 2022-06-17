@@ -194,7 +194,7 @@ PRODUTO (#_ nentrega  _ ->ENTREGA, _ codigo _, nome, tipoproduto, validade)
 
 ENTREGA (#_ nid  _ ->FORNECEDOR, _ codigo _, nome, tipoproduto, validade
 
-## 1ª Forma Normal (1NF)
+### 1ª Forma Normal (1NF)
 
 
 FUNCIONARIO (nome, #telefone, morada, nic, _ nidentificacao _)
@@ -206,24 +206,24 @@ FORNECEDOR (nome, #telefone, _ nid _)
 CONTACTO (_ telefone _,telefonepessoal, telefonetrabalho)
 
 
-## 2ª Forma Normal (2NF)
+### 2ª Forma Normal (2NF)
 
 Já se encontra na 2NF
 
 
-## 3ª Forma Normal (3NF)
+### 3ª Forma Normal (3NF)
 
 ENTREGA (_ numeroentrega _,validade, #reserva)
 
 reservaquantidade (_ reserva _, quantidade)
 
 
-## Forma Normal de Boyce-Codd (BCNF)
+### Forma Normal de Boyce-Codd (BCNF)
 
 Já se encontra na BCNF
 
 
-## 4ª Forma Normal (4NF)
+### 4ª Forma Normal (4NF)
 
 Já se encontra na 4NF
 
