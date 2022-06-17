@@ -97,11 +97,11 @@ Formacao (nome, _ tipoformacao _)
 
 PrecisaDe (# _ nidentificacao _ -> Funcionario, #_ tipoformacao _ -> Formacao)
 
-DependeDe (#_ id _ -> Turno, #_ id _-> Seccao)
+DependeDe (# _ id _ -> Turno, # _ id _-> Seccao)
 
 DefinidoPor (#_ id _ ->Turno, # _ id _-> Horario)
 
-Tem (#_ nid _-> Fornecedor, #_ id _-> Horario)
+Tem (# _ nid _-> Fornecedor, # _ id _-> Horario)
 
 Envia (#_ numeroentrega _ -> Entrega, #_ codigo _ -> Produto)
 
