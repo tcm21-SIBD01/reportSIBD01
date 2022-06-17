@@ -2,7 +2,7 @@
 
 ## Conversão do Modelo EA para Modelo Relacional
 
-###Passo 1: Entidades tipo
+### Passo 1: Entidades tipo
 
 Funcionario (nome, morada, nic, _nidentificao_)
 
@@ -20,11 +20,11 @@ Turno (_id_, partedia, hora)
 
 Formacao (nome, _tipoformacao_)
 
-###Passo 2: Associações 1:1
+### Passo 2: Associações 1:1
 
 Não existe associações com carnalidade 1:1
 
-###Passo 3: Associações 1:N
+### Passo 3: Associações 1:N
 
 Funcionario (nome, morada, nic, _nidentificao_
 #_id_ -> Turno)
@@ -45,7 +45,7 @@ Turno (_id_, partedia, hora)
 Formacao (nome, _tipoformacao_)
 
 
-###Passo 4: Associações N:M
+### Passo 4: Associações N:M
 
 Funcionario (nome, morada, nic, _nidentificao_
 #_id_ -> Turno)
@@ -75,7 +75,7 @@ Tem (#_nid_-> Fornecedor, # _id_-> Horario)
 
 Envia (#_numeroentrega_ -> Entrega, #_codigo_ -> Produto)
 
-###Passo 5: Atributo Multivalor
+### Passo 5: Atributo Multivalor
 
 Funcionario (nome, morada, nic, _nidentificao_
 #_id_ -> Turno)
@@ -107,11 +107,11 @@ Envia (#_numeroentrega_ -> Entrega, #_codigo_ -> Produto)
 
 Contacto (# _nidentificacao_ -> Funcionario, #_nid_ -> Fornecedor, _telefone_)
 
-###Passo 6: Associações ternárias
+### Passo 6: Associações ternárias
 
 Não existe associações ternárias
 
-###Passo 7: Entidades Fracas
+### Passo 7: Entidades Fracas
 
 Não existe entidades fracas
 
