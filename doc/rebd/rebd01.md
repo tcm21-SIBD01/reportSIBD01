@@ -9,7 +9,7 @@ Esta empresa é composta por funcionários e secções.
 
 Os funcionários têm um nome, telefone, morada, número de cartão de cidadão e número de identificação de funcionário.
 
-Produtos de maquilhagem, cosméticos, perfumaria, caixa, reposição, gerência, limpeza e fornecedores são as secções que fazem parte desta empresa. Os produtos são definidos pelo nome, tipo de produto, codigo do produto e validade.
+Maquilhagem, cosméticos, perfumaria, caixa, reposição, gerência, limpeza e fornecedores são as secções que fazem parte desta empresa. Os produtos são definidos pelo nome, tipo de produto, codigo do produto e validade.
 
 Os horários dos funcionários são definidos pela secção e pelo seu turno.
 
