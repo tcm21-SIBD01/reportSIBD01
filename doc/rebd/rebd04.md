@@ -11,7 +11,7 @@
 
 | **Nome** | **Descrição** |
 | --- | --- |
-| **Formacao** | informação sobre a formação | 
+| **Formacao** | Informação sobre a formação | 
 | **precisaDe** | O funcionário precisa de ter formação para trabalhar em algumas secções. | 
 | **Funcionários** | Informaçoes sobre os funcionarios. | 
 | **Turno** | Informações sobre o turno. |
