@@ -41,7 +41,7 @@ CREATE TABLE IF NOT EXISTS `mydb`.`Turno` (
 `parteDia` VARCHAR(45) NOT NULL,
 `id` INT NOT NULL AUTO_INCREMENT,
 PRIMARY KEY (`id`),
-INDEX `fk_Turno_Funcionario_idx` (`id` ASC) VISIBLE,
+INDEX `fk_Turno_Funcionario_idx` (`id` ASC),
 CONSTRAINT `fk_Turno_Funcionario`
 FOREIGN KEY (`id`)
 REFERENCES `mydb`.`Funcionario` (`n.id`)
@@ -101,7 +101,7 @@ CREATE TABLE IF NOT EXISTS `mydb`.`Fornecedor` (
 `telefone` INT NOT NULL,
 `Entrega_tipoProduto` INT NOT NULL,
 PRIMARY KEY (`nid`, `Entrega_tipoProduto`),
-INDEX `fk_Fornecedor_Entrega1_idx` (`Entrega_tipoProduto` ASC) VISIBLE,
+INDEX `fk_Fornecedor_Entrega1_idx` (`Entrega_tipoProduto` ASC),
 CONSTRAINT `fk_Fornecedor_Entrega1`
 FOREIGN KEY (`Entrega_tipoProduto`)
 REFERENCES `mydb`.`Entrega` (`nEntrega`)
@@ -133,8 +133,8 @@ CREATE TABLE IF NOT EXISTS `mydb`.`envia` (
 `Entrega_tipoProduto` INT NOT NULL,
 `Produto_codigo` INT NOT NULL,
 PRIMARY KEY (`Entrega_tipoProduto`, `Produto_codigo`),
-INDEX `fk_Entrega_has_Produto_Produto1_idx` (`Produto_codigo` ASC) VISIBLE,
-INDEX `fk_Entrega_has_Produto_Entrega1_idx` (`Entrega_tipoProduto` ASC) VISIBLE,
+INDEX `fk_Entrega_has_Produto_Produto1_idx` (`Produto_codigo` ASC),
+INDEX `fk_Entrega_has_Produto_Entrega1_idx` (`Entrega_tipoProduto` ASC),
 CONSTRAINT `fk_Entrega_has_Produto_Entrega1`
 FOREIGN KEY (`Entrega_tipoProduto`)
 REFERENCES `mydb`.`Entrega` (`nEntrega`)
@@ -157,8 +157,8 @@ CREATE TABLE IF NOT EXISTS `mydb`.`precisaDe` (
 `Funcionario_n.id` INT NOT NULL,
 `Formacao_tipoFormacao` VARCHAR(45) NOT NULL,
 PRIMARY KEY (`Funcionario_n.id`, `Formacao_tipoFormacao`),
-INDEX `fk_Funcionario_has_Formacao_Formacao1_idx` (`Formacao_tipoFormacao` ASC) VISIBLE,
-INDEX `fk_Funcionario_has_Formacao_Funcionario1_idx` (`Funcionario_n.id` ASC) VISIBLE,
+INDEX `fk_Funcionario_has_Formacao_Formacao1_idx` (`Formacao_tipoFormacao` ASC),
+INDEX `fk_Funcionario_has_Formacao_Funcionario1_idx` (`Funcionario_n.id` ASC),
 CONSTRAINT `fk_Funcionario_has_Formacao_Funcionario1`
 FOREIGN KEY (`Funcionario_n.id`)
 REFERENCES `mydb`.`Funcionario` (`n.id`)
@@ -181,8 +181,8 @@ CREATE TABLE IF NOT EXISTS `mydb`.`definidoPor` (
 `Turno_id` INT NOT NULL,
 `horario_id` INT NOT NULL,
 PRIMARY KEY (`Turno_id`, `horario_id`),
-INDEX `fk_Turno_has_horario_horario1_idx` (`horario_id` ASC) VISIBLE,
-INDEX `fk_Turno_has_horario_Turno1_idx` (`Turno_id` ASC) VISIBLE,
+INDEX `fk_Turno_has_horario_horario1_idx` (`horario_id` ASC),
+INDEX `fk_Turno_has_horario_Turno1_idx` (`Turno_id` ASC),
 CONSTRAINT `fk_Turno_has_horario_Turno1`
 FOREIGN KEY (`Turno_id`)
 REFERENCES `mydb`.`Turno` (`id`)
@@ -205,8 +205,8 @@ CREATE TABLE IF NOT EXISTS `mydb`.`tem` (
 `horario_id` INT NOT NULL,
 `Fornecedor_nid` INT NOT NULL,
 PRIMARY KEY (`horario_id`, `Fornecedor_nid`),
-INDEX `fk_horario_has_Fornecedor_Fornecedor1_idx` (`Fornecedor_nid` ASC) VISIBLE,
-INDEX `fk_horario_has_Fornecedor_horario1_idx` (`horario_id` ASC) VISIBLE,
+INDEX `fk_horario_has_Fornecedor_Fornecedor1_idx` (`Fornecedor_nid` ASC),
+INDEX `fk_horario_has_Fornecedor_horario1_idx` (`horario_id` ASC),
 CONSTRAINT `fk_horario_has_Fornecedor_horario1`
 FOREIGN KEY (`horario_id`)
 REFERENCES `mydb`.`horario` (`id`)
@@ -229,8 +229,8 @@ CREATE TABLE IF NOT EXISTS `mydb`.`dependeDe` (
 `Turno_id` INT NOT NULL,
 `seccao_id` INT NOT NULL,
 PRIMARY KEY (`Turno_id`, `seccao_id`),
-INDEX `fk_Turno_has_seccao_seccao1_idx` (`seccao_id` ASC) VISIBLE,
-INDEX `fk_Turno_has_seccao_Turno1_idx` (`Turno_id` ASC) VISIBLE,
+INDEX `fk_Turno_has_seccao_seccao1_idx` (`seccao_id` ASC),
+INDEX `fk_Turno_has_seccao_Turno1_idx` (`Turno_id` ASC),
 CONSTRAINT `fk_Turno_has_seccao_Turno1`
 FOREIGN KEY (`Turno_id`)
 REFERENCES `mydb`.`Turno` (`id`)
