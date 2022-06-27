@@ -2,81 +2,6 @@
 
 ## Conversão do Modelo EA para Modelo Relacional
 
-### Passo 1: Entidades tipo
-
-Funcionario (nome, morada, nic, _ nidentificao _)
-
-Seccao (nome, _ id _)
-
-Fornecedor (nome, _ nid _)
-
-Horario (_ id _, horafim, horainicio, diasemana)
-
-Entrega (_ numeroentrega _, validade, reserva, quantidade)
-
-Produto (nome, tipoproduto, _ codigo _, validade)
-
-Turno (_ id _, partedia, hora)
-
-Formacao (nome, _ tipoformacao _)
-
-### Passo 2: Associações 1:1
-
-Não existe associações com carnalidade 1:1
-
-### Passo 3: Associações 1:N
-
-Funcionario (nome, morada, nic, _ nidentificao _,
-#turnoId -> Turno NN)
-
-Seccao (nome, _ id _)
-
-Fornecedor (nome, _ nid _)
-
-Horario (_ id _, horafim, horainicio, diasemana)
-
-Entrega (_ numeroentrega _, validade, reserva, quantidade,
-#fornecedorNid -> Fornecedor NN)
-
-Produto (nome, tipoproduto, _ codigo _, validade)
-
-Turno (_ id _, partedia, hora)
-
-Formacao (nome, _ tipoformacao _)
-
-
-### Passo 4: Associações N:M
-
-Funcionario (nome, morada, nic, _ nidentificao _,
-#turnoId -> Turno NN)
-
-Seccao (nome, _ id _)
-
-Fornecedor (nome, _ nid _)
-
-Horario (_ id _, horafim, horainicio, diasemana)
-
-Entrega (_ numeroentrega _, validade, reserva, quantidade,
-#fornecedorNid -> Fornecedor NN)
-
-Produto (nome, tipoproduto, _ codigo _, validade)
-
-Turno (_ id _, partedia, hora)
-
-Formacao (nome, _ tipoformacao _)
-
-PrecisaDe (# _ nidentificacao _ -> Funcionario, #_ tipoformacao _ -> Formacao)
-
-DependeDe (#_ id _ -> Turno, #_ id _-> Seccao)
-
-DefinidoPor (#_ id _ ->Turno, #_ id _-> Horario)
-
-Tem (#_ nid _-> Fornecedor, # _ id _-> Horario)
-
-Envia (#_ numeroentrega _ -> Entrega, #_ codigo _ -> Produto)
-
-### Passo 5: Atributo Multivalor
-
 Funcionario (nome, morada, nic, _ nidentificao _,
 #turnoId -> Turno NN)
 
@@ -106,16 +31,6 @@ Tem (# _ nid _-> Fornecedor, # _ id _-> Horario)
 Envia (#_ numeroentrega _ -> Entrega, #_ codigo _ -> Produto)
 
 Contacto (# _ nidentificacao _ -> Funcionario, #_ nid _ -> Fornecedor, _ telefone _)
-
-### Passo 6: Associações ternárias
-
-Não existe associações ternárias
-
-### Passo 7: Entidades Fracas
-
-Não existe entidades fracas
-
-
 
 
 ## Relacoes 
