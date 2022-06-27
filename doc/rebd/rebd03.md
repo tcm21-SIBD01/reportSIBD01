@@ -27,7 +27,7 @@ Não existe associações com carnalidade 1:1
 ### Passo 3: Associações 1:N
 
 Funcionario (nome, morada, nic, _ nidentificao _,
-#_ id _ -> Turno)
+#turnoId -> Turno NN)
 
 Seccao (nome, _ id _)
 
@@ -36,7 +36,7 @@ Fornecedor (nome, _ nid _)
 Horario (_ id _, horafim, horainicio, diasemana)
 
 Entrega (_ numeroentrega _, validade, reserva, quantidade,
-#_ nid _ -> Fornecedor)
+#fornecedorNid -> Fornecedor NN)
 
 Produto (nome, tipoproduto, _ codigo _, validade)
 
@@ -48,7 +48,7 @@ Formacao (nome, _ tipoformacao _)
 ### Passo 4: Associações N:M
 
 Funcionario (nome, morada, nic, _ nidentificao _,
-#_ id _ -> Turno)
+#turnoId -> Turno NN)
 
 Seccao (nome, _ id _)
 
@@ -57,7 +57,7 @@ Fornecedor (nome, _ nid _)
 Horario (_ id _, horafim, horainicio, diasemana)
 
 Entrega (_ numeroentrega _, validade, reserva, quantidade,
-#_ nid _ -> Fornecedor)
+#fornecedorNid -> Fornecedor NN)
 
 Produto (nome, tipoproduto, _ codigo _, validade)
 
@@ -78,7 +78,7 @@ Envia (#_ numeroentrega _ -> Entrega, #_ codigo _ -> Produto)
 ### Passo 5: Atributo Multivalor
 
 Funcionario (nome, morada, nic, _ nidentificao _,
-#_ id _ -> Turno)
+#turnoId -> Turno NN)
 
 Seccao (nome, _ id _)
 
@@ -87,7 +87,7 @@ Fornecedor (nome, _ nid _)
 Horario (_ id _, horafim, horainicio, diasemana)
 
 Entrega (_ numeroentrega _, validade, reserva, quantidade,
-#_ nid _ -> Fornecedor)
+#fornecedorNid -> Fornecedor NN)
 
 Produto (nome, tipoproduto, _ codigo _, validade)
 
@@ -121,9 +121,9 @@ Não existe entidades fracas
 ## Relacoes 
 
 
-|Funcionario     |    |      |   |                |
-|----------------|----|------|---|----------------|
-|_ nidenticacao _|nome|morada|nic|#_ id _ -> Turno|
+|Funcionario     |    |      |   |                   |         |
+|----------------|----|------|---|-------------------|---------|
+|_ nidenticacao _|nome|morada|nic|#turnoId-> Turno NN| Cargo NN|
 
 |Seccao  |    |    
 |--------|----|
@@ -137,9 +137,9 @@ Não existe entidades fracas
 |-------|-------|----------|---------|
 |_ id _ |horafim|horainicio|diasemana|
 
-|Entrega          |        |       |          |                      |
-|-----------------|--------|-------|----------|----------------------|
-|_ numeroentrega _|validade|reserva|quantidade|#_ nid _ -> Fornecedor|
+|Entrega          |        |       |          |                               |        |
+|-----------------|--------|-------|----------|-------------------------------|--------|
+|_ numeroentrega _|validade|reserva|quantidade|#fornecedorNid -> Fornecedor NN|Cargo NN|
 
 |Produto   |    |           |        |
 |----------|----|-----------|--------|
