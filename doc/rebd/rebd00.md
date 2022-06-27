@@ -14,7 +14,5 @@
 * Isis Silva [@isissilva](https://github.com/IsisSilva)
 * Mariana Carneiro [@marianaCarneiro](https://github.com/Mariana4Carneiro)
 
----
-_You can add a footer menu for navigation_ 
 < Previous | [^ Main](https://github.com/tcm21-SIBD01/reportSIBD01) | [Next >](rebd01.md)
 :--- | :---: | ---: 
