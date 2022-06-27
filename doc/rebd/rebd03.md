@@ -97,19 +97,22 @@ Contacto (# _ nidentificacao _ -> Funcionario, #_ nid _ -> Fornecedor, _ telefon
 
 #### Dependências Funcionais:
 
-TURNO (#_ nid  _ ->FUNCIONARIO, _ id _, partedia, hora)
+Tipoformacao --> nome
 
-FORMACAO (#_ nid  _ ->FUNCIONARIO, _ tipoformacao _, nome)
+ParteDia --> id
 
-SECCAO (#_ id  _ ->TURNO, _ id _, nome)
+Id --> nome
 
-HORARIO (#_ id  _ ->TURNO, _ id _, horafim, horainicio, diasemana)
+Id --> horaFim, horaInicio, diaSemana
 
-HORARIO (#_ nid  _ ->FORNECEDOR, _ id _, horafim, horainicio, diasemana)
+Nid --> nome, telefone
 
-PRODUTO (#_ nentrega  _ ->ENTREGA, _ codigo _, nome, tipoproduto, validade)
+nEntrega --> quantidade, reserva, validade
 
-ENTREGA (#_ nid  _ ->FORNECEDOR, _ codigo _, nome, tipoproduto, validade
+código --> nome, tipoProduto, validade
+
+n.id --> telefone, nome, morada, nic
+
 
 ### 1ª Forma Normal (1NF)
 
