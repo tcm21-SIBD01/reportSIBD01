@@ -14,5 +14,6 @@
 * Isis Silva [@isissilva](https://github.com/IsisSilva)
 * Mariana Carneiro [@marianaCarneiro](https://github.com/Mariana4Carneiro)
 
+---
 < Previous | [^ Main](https://github.com/tcm21-SIBD01/reportSIBD01) | [Next >](rebd01.md)
 :--- | :---: | ---: 
