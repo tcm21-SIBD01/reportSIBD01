@@ -32,6 +32,7 @@ Envia (#_ numeroentrega _ -> Entrega, #_ codigo _ -> Produto)
 
 Contacto (# _ nidentificacao _ -> Funcionario, #_ nid _ -> Fornecedor, _ telefone _)
 
+- Não existem associações 1:1 , nem associações ternárias, nem entidades fracas. 
 
 ## Relacoes 
 
