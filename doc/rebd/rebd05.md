@@ -2,253 +2,127 @@
 
 ## DDL
 
-CREATE SCHEMA IF NOT EXISTS `mydb` DEFAULT CHARACTER SET utf8 ;
-USE `mydb` ;
+CREATE SCHEMA IF NOT EXISTS `natural beauty`;
 
+CREATE TABLE IF NOT EXISTS `natural beauty`.`horario` (
+  `diaSemana` VARCHAR(45) NOT NULL,
+  `horaFim` INT NOT NULL,
+  `horaInicio` INT NOT NULL,
+  `id` INT NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`id`));
+  
+CREATE TABLE IF NOT EXISTS `natural beauty`.`funcionario` (
+  `n.id` INT NOT NULL AUTO_INCREMENT,
+  `nome` VARCHAR(45) NOT NULL,
+  `morada` VARCHAR(45) NOT NULL,
+  `telefone` INT NOT NULL,
+  `nic` INT NOT NULL,
+  PRIMARY KEY (`n.id`));
+  
+  CREATE TABLE IF NOT EXISTS `natural beauty`.`turno` (
+  `parteDia` VARCHAR(45) NOT NULL,
+  `id` INT NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`id`),
+  INDEX `fk_Turno_Funcionario_idx` (`id` ASC),
+  CONSTRAINT `fk_Turno_Funcionario`
+    FOREIGN KEY (`id`)
+    REFERENCES `natural beauty`.`funcionario` (`n.id`));
+    
+    CREATE TABLE IF NOT EXISTS `natural beauty`.`definidopor` (
+  `Turno_id` INT NOT NULL,
+  `horario_id` INT NOT NULL,
+  PRIMARY KEY (`Turno_id`, `horario_id`),
+  INDEX `fk_Turno_has_horario_horario1_idx` (`horario_id` ASC),
+  INDEX `fk_Turno_has_horario_Turno1_idx` (`Turno_id` ASC),
+  CONSTRAINT `fk_Turno_has_horario_horario1`
+    FOREIGN KEY (`horario_id`)
+    REFERENCES `natural beauty`.`horario` (`id`),
+  CONSTRAINT `fk_Turno_has_horario_Turno1`
+    FOREIGN KEY (`Turno_id`)
+    REFERENCES `natural beauty`.`turno` (`id`));
+    
+    CREATE TABLE IF NOT EXISTS `natural beauty`.`seccao` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `nome` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`id`));
+  
+  CREATE TABLE IF NOT EXISTS `natural beauty`.`dependede` (
+  `Turno_id` INT NOT NULL,
+  `seccao_id` INT NOT NULL,
+  PRIMARY KEY (`Turno_id`, `seccao_id`),
+  INDEX `fk_Turno_has_seccao_seccao1_idx` (`seccao_id` ASC),
+  INDEX `fk_Turno_has_seccao_Turno1_idx` (`Turno_id` ASC),
+  CONSTRAINT `fk_Turno_has_seccao_seccao1`
+    FOREIGN KEY (`seccao_id`)
+    REFERENCES `natural beauty`.`seccao` (`id`),
+  CONSTRAINT `fk_Turno_has_seccao_Turno1`
+    FOREIGN KEY (`Turno_id`)
+    REFERENCES `natural beauty`.`turno` (`id`));
 
+CREATE TABLE IF NOT EXISTS `natural beauty`.`entrega` (
+  `nEntrega` INT NOT NULL AUTO_INCREMENT,
+  `validade` DATE NOT NULL,
+  `reserva` INT NOT NULL,
+  `quantidade` INT NOT NULL,
+  PRIMARY KEY (`nEntrega`));
+  
+  CREATE TABLE IF NOT EXISTS `natural beauty`.`produto` (
+  `codigo` INT NOT NULL AUTO_INCREMENT,
+  `nome` VARCHAR(45) NOT NULL,
+  `tipoProduto` VARCHAR(45) NOT NULL,
+  `validade` DATE NOT NULL,
+  PRIMARY KEY (`codigo`));
 
--- -----------------------------------------------------
--- Table `mydb`.`Funcionario`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`Funcionario` (
-`n.id` INT NOT NULL AUTO_INCREMENT,
-`nome` VARCHAR(45) NOT NULL,
-`morada` VARCHAR(45) NOT NULL,
-`telefone` INT NOT NULL,
-`nic` INT NOT NULL,
-PRIMARY KEY (`n.id`))
-ENGINE = InnoDB;
+CREATE TABLE IF NOT EXISTS `natural beauty`.`envia` (
+  `Entrega_tipoProduto` INT NOT NULL,
+  `Produto_codigo` INT NOT NULL,
+  PRIMARY KEY (`Entrega_tipoProduto`, `Produto_codigo`),
+  INDEX `fk_Entrega_has_Produto_Produto1_idx` (`Produto_codigo` ASC),
+  INDEX `fk_Entrega_has_Produto_Entrega1_idx` (`Entrega_tipoProduto` ASC),
+  CONSTRAINT `fk_Entrega_has_Produto_Entrega1`
+    FOREIGN KEY (`Entrega_tipoProduto`)
+    REFERENCES `natural beauty`.`entrega` (`nEntrega`),
+  CONSTRAINT `fk_Entrega_has_Produto_Produto1`
+    FOREIGN KEY (`Produto_codigo`)
+    REFERENCES `natural beauty`.`produto` (`codigo`));
 
+CREATE TABLE IF NOT EXISTS `natural beauty`.`formacao` (
+  `tipoFormacao` VARCHAR(45) NOT NULL,
+  `nome` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`tipoFormacao`));
+  
+  CREATE TABLE IF NOT EXISTS `natural beauty`.`fornecedor` (
+  `nid` INT NOT NULL AUTO_INCREMENT,
+  `nome` VARCHAR(45) NOT NULL,
+  `telefone` INT NOT NULL,
+  PRIMARY KEY (`nid`));
 
+CREATE TABLE IF NOT EXISTS `natural beauty`.`precisade` (
+  `Funcionario_n.id` INT NOT NULL,
+  `Formacao_tipoFormacao` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`Funcionario_n.id`, `Formacao_tipoFormacao`),
+  INDEX `fk_Funcionario_has_Formacao_Formacao1_idx` (`Formacao_tipoFormacao` ASC),
+  INDEX `fk_Funcionario_has_Formacao_Funcionario1_idx` (`Funcionario_n.id` ASC),
+  CONSTRAINT `fk_Funcionario_has_Formacao_Formacao1`
+    FOREIGN KEY (`Formacao_tipoFormacao`)
+    REFERENCES `natural beauty`.`formacao` (`tipoFormacao`),
+  CONSTRAINT `fk_Funcionario_has_Formacao_Funcionario1`
+    FOREIGN KEY (`Funcionario_n.id`)
+    REFERENCES `natural beauty`.`funcionario` (`n.id`));
 
+CREATE TABLE IF NOT EXISTS `natural beauty`.`tem` (
+  `horario_id` INT NOT NULL,
+  `Fornecedor_nid` INT NOT NULL,
+  PRIMARY KEY (`horario_id`, `Fornecedor_nid`),
+  INDEX `fk_horario_has_Fornecedor_Fornecedor1_idx` (`Fornecedor_nid` ASC),
+  INDEX `fk_horario_has_Fornecedor_horario1_idx` (`horario_id` ASC),
+  CONSTRAINT `fk_horario_has_Fornecedor_Fornecedor1`
+    FOREIGN KEY (`Fornecedor_nid`)
+    REFERENCES `natural beauty`.`fornecedor` (`nid`),
+  CONSTRAINT `fk_horario_has_Fornecedor_horario1`
+    FOREIGN KEY (`horario_id`)
+    REFERENCES `natural beauty`.`horario` (`id`));
 
--- -----------------------------------------------------
--- Table `mydb`.`Formacao`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`Formacao` (
-`tipoFormacao` VARCHAR(45) NOT NULL,
-`nome` VARCHAR(45) NOT NULL,
-PRIMARY KEY (`tipoFormacao`))
-ENGINE = InnoDB;
-
-
-
-
--- -----------------------------------------------------
--- Table `mydb`.`Turno`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`Turno` (
-`parteDia` VARCHAR(45) NOT NULL,
-`id` INT NOT NULL AUTO_INCREMENT,
-PRIMARY KEY (`id`),
-INDEX `fk_Turno_Funcionario_idx` (`id` ASC),
-CONSTRAINT `fk_Turno_Funcionario`
-FOREIGN KEY (`id`)
-REFERENCES `mydb`.`Funcionario` (`n.id`)
-ON DELETE NO ACTION
-ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
-
-
-
--- -----------------------------------------------------
--- Table `mydb`.`horario`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`horario` (
-`diaSemana` VARCHAR(45) NOT NULL,
-`horaFim` INT NOT NULL,
-`horaInicio` INT NOT NULL,
-`id` INT NOT NULL AUTO_INCREMENT,
-PRIMARY KEY (`id`))
-ENGINE = InnoDB;
-
-
-
-
--- -----------------------------------------------------
--- Table `mydb`.`seccao`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`seccao` (
-`id` INT NOT NULL AUTO_INCREMENT,
-`nome` VARCHAR(45) NOT NULL,
-PRIMARY KEY (`id`))
-ENGINE = InnoDB;
-
-
-
-
--- -----------------------------------------------------
--- Table `mydb`.`Entrega`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`Entrega` (
-`nEntrega` INT NOT NULL AUTO_INCREMENT,
-`validade` INT NOT NULL,
-`reserva` INT NOT NULL,
-`quantidade` INT NOT NULL,
-PRIMARY KEY (`nEntrega`))
-ENGINE = InnoDB;
-
-
-
-
--- -----------------------------------------------------
--- Table `mydb`.`Fornecedor`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`Fornecedor` (
-`nid` INT NOT NULL AUTO_INCREMENT,
-`nome` VARCHAR(45) NOT NULL,
-`telefone` INT NOT NULL,
-`Entrega_tipoProduto` INT NOT NULL,
-PRIMARY KEY (`nid`, `Entrega_tipoProduto`),
-INDEX `fk_Fornecedor_Entrega1_idx` (`Entrega_tipoProduto` ASC),
-CONSTRAINT `fk_Fornecedor_Entrega1`
-FOREIGN KEY (`Entrega_tipoProduto`)
-REFERENCES `mydb`.`Entrega` (`nEntrega`)
-ON DELETE NO ACTION
-ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
-
-
-
--- -----------------------------------------------------
--- Table `mydb`.`Produto`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`Produto` (
-`codigo` INT NOT NULL AUTO_INCREMENT,
-`nome` VARCHAR(45) NOT NULL,
-`tipoProduto` VARCHAR(45) NOT NULL,
-`validade` INT NOT NULL,
-PRIMARY KEY (`codigo`))
-ENGINE = InnoDB;
-
-
-
-
--- -----------------------------------------------------
--- Table `mydb`.`envia`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`envia` (
-`Entrega_tipoProduto` INT NOT NULL,
-`Produto_codigo` INT NOT NULL,
-PRIMARY KEY (`Entrega_tipoProduto`, `Produto_codigo`),
-INDEX `fk_Entrega_has_Produto_Produto1_idx` (`Produto_codigo` ASC),
-INDEX `fk_Entrega_has_Produto_Entrega1_idx` (`Entrega_tipoProduto` ASC),
-CONSTRAINT `fk_Entrega_has_Produto_Entrega1`
-FOREIGN KEY (`Entrega_tipoProduto`)
-REFERENCES `mydb`.`Entrega` (`nEntrega`)
-ON DELETE NO ACTION
-ON UPDATE NO ACTION,
-CONSTRAINT `fk_Entrega_has_Produto_Produto1`
-FOREIGN KEY (`Produto_codigo`)
-REFERENCES `mydb`.`Produto` (`codigo`)
-ON DELETE NO ACTION
-ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
-
-
-
--- -----------------------------------------------------
--- Table `mydb`.`precisaDe`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`precisaDe` (
-`Funcionario_n.id` INT NOT NULL,
-`Formacao_tipoFormacao` VARCHAR(45) NOT NULL,
-PRIMARY KEY (`Funcionario_n.id`, `Formacao_tipoFormacao`),
-INDEX `fk_Funcionario_has_Formacao_Formacao1_idx` (`Formacao_tipoFormacao` ASC),
-INDEX `fk_Funcionario_has_Formacao_Funcionario1_idx` (`Funcionario_n.id` ASC),
-CONSTRAINT `fk_Funcionario_has_Formacao_Funcionario1`
-FOREIGN KEY (`Funcionario_n.id`)
-REFERENCES `mydb`.`Funcionario` (`n.id`)
-ON DELETE NO ACTION
-ON UPDATE NO ACTION,
-CONSTRAINT `fk_Funcionario_has_Formacao_Formacao1`
-FOREIGN KEY (`Formacao_tipoFormacao`)
-REFERENCES `mydb`.`Formacao` (`tipoFormacao`)
-ON DELETE NO ACTION
-ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
-
-
-
--- -----------------------------------------------------
--- Table `mydb`.`definidoPor`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`definidoPor` (
-`Turno_id` INT NOT NULL,
-`horario_id` INT NOT NULL,
-PRIMARY KEY (`Turno_id`, `horario_id`),
-INDEX `fk_Turno_has_horario_horario1_idx` (`horario_id` ASC),
-INDEX `fk_Turno_has_horario_Turno1_idx` (`Turno_id` ASC),
-CONSTRAINT `fk_Turno_has_horario_Turno1`
-FOREIGN KEY (`Turno_id`)
-REFERENCES `mydb`.`Turno` (`id`)
-ON DELETE NO ACTION
-ON UPDATE NO ACTION,
-CONSTRAINT `fk_Turno_has_horario_horario1`
-FOREIGN KEY (`horario_id`)
-REFERENCES `mydb`.`horario` (`id`)
-ON DELETE NO ACTION
-ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
-
-
-
--- -----------------------------------------------------
--- Table `mydb`.`tem`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`tem` (
-`horario_id` INT NOT NULL,
-`Fornecedor_nid` INT NOT NULL,
-PRIMARY KEY (`horario_id`, `Fornecedor_nid`),
-INDEX `fk_horario_has_Fornecedor_Fornecedor1_idx` (`Fornecedor_nid` ASC),
-INDEX `fk_horario_has_Fornecedor_horario1_idx` (`horario_id` ASC),
-CONSTRAINT `fk_horario_has_Fornecedor_horario1`
-FOREIGN KEY (`horario_id`)
-REFERENCES `mydb`.`horario` (`id`)
-ON DELETE NO ACTION
-ON UPDATE NO ACTION,
-CONSTRAINT `fk_horario_has_Fornecedor_Fornecedor1`
-FOREIGN KEY (`Fornecedor_nid`)
-REFERENCES `mydb`.`Fornecedor` (`nid`)
-ON DELETE NO ACTION
-ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
-
-
-
--- -----------------------------------------------------
--- Table `mydb`.`dependeDe`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`dependeDe` (
-`Turno_id` INT NOT NULL,
-`seccao_id` INT NOT NULL,
-PRIMARY KEY (`Turno_id`, `seccao_id`),
-INDEX `fk_Turno_has_seccao_seccao1_idx` (`seccao_id` ASC),
-INDEX `fk_Turno_has_seccao_Turno1_idx` (`Turno_id` ASC),
-CONSTRAINT `fk_Turno_has_seccao_Turno1`
-FOREIGN KEY (`Turno_id`)
-REFERENCES `mydb`.`Turno` (`id`)
-ON DELETE NO ACTION
-ON UPDATE NO ACTION,
-CONSTRAINT `fk_Turno_has_seccao_seccao1`
-FOREIGN KEY (`seccao_id`)
-REFERENCES `mydb`.`seccao` (`id`)
-ON DELETE NO ACTION
-ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
-
-
-
-SET SQL_MODE=@OLD_SQL_MODE;
-SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
-SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 
 
 ## DML
