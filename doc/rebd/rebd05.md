@@ -157,6 +157,8 @@ INSERT INTO naturalbeauty.funcionario VALUES ('16', 'Pedro Golcalves', 'morada16
 ```sql
 SELECT * FROM naturalbeauty.funcionario
 ```
+![An alternative description](imagens/funcionarios.png)
+
 
 INSERT INTO `seccao` (nome, id) VALUES 
 ('maquilhagem', '1'),
