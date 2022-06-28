@@ -2,6 +2,9 @@
 
 ## DDL
 
+
+```sql
+
 CREATE SCHEMA IF NOT EXISTS `natural beauty`;
 
 CREATE TABLE IF NOT EXISTS `natural beauty`.`horario` (
