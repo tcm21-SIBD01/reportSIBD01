@@ -159,33 +159,55 @@ SELECT * FROM naturalbeauty.funcionario
 ```
 ![An alternative description](imagens/funcionarios.png)
 
+### seccao
 
-INSERT INTO `seccao` (nome, id) VALUES 
-('maquilhagem', '1'),
-('comesticos', '2'),
-('perfumaria', '3'),
-('caixa', '4'),
-('reposiçao', '5'),
-('gerencia', '6'),
-('limpeza', '7'),
-('fornecedores', '8');
+```sql
+INSERT INTO naturalbeauty.seccao VALUES ('1', 'maquilhagem');
+INSERT INTO naturalbeauty.seccao VALUES ('2', 'cosmeticos');
+INSERT INTO naturalbeauty.seccao VALUES ('3', 'perfumaria');
+INSERT INTO naturalbeauty.seccao VALUES ('4', 'caixa');
+INSERT INTO naturalbeauty.seccao VALUES ('5', 'reposicao');
+INSERT INTO naturalbeauty.seccao VALUES ('6', 'gerencia');
+INSERT INTO naturalbeauty.seccao VALUES ('7', 'limpeza');
+INSERT INTO naturalbeauty.seccao VALUES ('8', 'fornecedores');
+```
+```sql
+SELECT * FROM naturalbeauty.seccao
+```
+![An alternative description](imagens/seccao.png)
+
+### fornecedor
+
+```sql
+INSERT INTO naturalbeauty.fornecedor VALUES ('1', 'nome1', '253000001') ;
+INSERT INTO naturalbeauty.fornecedor VALUES ('2', 'nome2', '253000002') ;
+INSERT INTO naturalbeauty.fornecedor VALUES ('3', 'nome3', '253000003') ;
+```
+```sql
+SELECT * FROM naturalbeauty.fornecedor
+```
+![An alternative description](imagens/fornecedor.png)
 
 
-INSERT INTO `fornecedor` (nome, id, telefonepessoal, telefoneempresa) VALUES
-('nome1', ' 1', '960000017', '200000017'),
-('nome3', ' 3', '2960000018', '200000018'),
-('nome5', '5', '960000019', '200000019');
+### horario
 
+```sql
+INSERT INTO naturalbeauty.horario VALUES ('segundafeira', '21', '10', '1');
+INSERT INTO naturalbeauty.horario VALUES ('tercafeira', '21', '10', '2');
+INSERT INTO naturalbeauty.horario VALUES ('quartafeira', '21', '10', '3');
+INSERT INTO naturalbeauty.horario VALUES ('quintafeira', '21', '10', '4');
+INSERT INTO naturalbeauty.horario VALUES ('sextafeira', '21', '10', '5');
+INSERT INTO naturalbeauty.horario VALUES ('sabado', '18', '10', '6');
+INSERT INTO naturalbeauty.horario VALUES ('domingo', '18', '10', '7');
+```
+```sql
+SELECT * FROM naturalbeauty.horario
+```
+![An alternative description](imagens/horario.png)
 
-INSERT INTO `horario` (id,horafim,horainicio, diasemana ) VALUES
-('1', '10:00', '21:00', 'segundafeira'),
-('2', '10:00', '21:00', 'terçafeira'),
-('3', '10:00', '21:00', 'quartafeira'),
-('4', '10:00', '21:00', 'quintafeira'),
-('5' , '10:00', '22:00', 'sextafeira'),
-('6', '10:00', '21:00', 'sabado'),
-('7', '10:00', '18:00', 'domingo');
+### entrega
 
+```sql
 INSERT INTO `entrega` (nentrega, validade, reserva , quantidade) VALUES
 ('1', '21/03/2023', '45854833', '57'),
 ('2', '20/09/2023', '4585454', '34'),
