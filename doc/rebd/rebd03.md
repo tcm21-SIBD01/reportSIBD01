@@ -92,7 +92,7 @@ Contacto (# _ nidentificacao _ -> Funcionario, #_ nid _ -> Fornecedor, _ telefon
 |---------------------------------|---------------------|------------|
 |#_ nidentificacao _ ->Funcionario|#_ nid _ ->Fornecedor|_ telefone _|
 
-
+---
 # Normalização do Esquema Relacional
 
 #### Dependências Funcionais:
@@ -113,7 +113,7 @@ código --> nome, tipoProduto, validade
 
 n.id --> telefone, nome, morada, nic
 
-
+---
 ### 1ª Forma Normal (1NF)
 
 
@@ -125,7 +125,7 @@ FORNECEDOR (nome, #telefone, _ nid _)
 
 CONTACTO (_ telefone _,telefonepessoal, telefonetrabalho)
 
-
+----
 ### 2ª Forma Normal (2NF)
 
 Já se encontra na 2NF
