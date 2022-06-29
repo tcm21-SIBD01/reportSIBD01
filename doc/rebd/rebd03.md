@@ -114,7 +114,7 @@ código --> nome, tipoProduto, validade
 n.id --> telefone, nome, morada, nic
 
 ---
-FORMACAO (nome, tipoFormacao)
+FORMACAO (nome, <ins>tipoformacao</ins> )
 
 1NF
 
@@ -129,7 +129,7 @@ Já se encontra na 2NF
 Já se encontra na 3NF
 
 ----
-FUNCIONARIO (telefone, nome, n.id, morada, nic)
+FUNCIONARIO (nome, {telefone (telefonepessoal, telefonecasa)}, morada, nic , <ins>nidentificacao</ins>)
 
 1NF
 
@@ -144,7 +144,7 @@ Já se encontra na 2NF
 Já se encontra na 3NF
 
 ----
-TURNO (parteDia, id)
+TURNO (<ins>id</ins>, partedia ,hora)
 
 1NF
 
@@ -159,7 +159,7 @@ Já se encontra na 2NF
 Já se encontra na 3NF
 
 ----
-SECCAO (id, nome)
+SECCAO (nome,<ins>id</ins>) 
 
 1NF
 
@@ -174,7 +174,7 @@ Já se encontra na 2NF
 Já se encontra na 3NF
 
 ----
-HORARIO (id, horaFim, horaInicio, diaSemana)
+HORARIO (<ins>id</ins>, horafim, horainicio, diasemana)
 
 1NF
 
@@ -189,7 +189,7 @@ Já se encontra na 2NF
 Já se encontra na 3NF
 
 ----
-FORNECEDOR (nome, nid, telefone)
+FORNECEDOR (nome, <ins>nid</ins> , {telefone (telefonepessoal, telefoneempresa) })
 
 1NF
 
@@ -204,7 +204,7 @@ Já se encontra na 2NF
 Já se encontra na 3NF
 
 ----
-ENTREGA (quantidade, validade, reserva, nEntrega)
+ENTREGA (<ins>nentrega</ins> , validade, reserva, quantidade)
 
 1NF
 
@@ -219,7 +219,7 @@ Já se encontra na 2NF
 Já se encontra na 3NF
 
 ----
-PRODUTO (nome, tipoProduto, validade, codigo)
+PRODUTO (nome,tipoproduto, <ins>codigo</ins> ,validade )
 
 1NF
 
