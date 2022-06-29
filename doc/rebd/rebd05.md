@@ -208,43 +208,68 @@ SELECT * FROM naturalbeauty.horario
 ### entrega
 
 ```sql
-INSERT INTO `entrega` (nentrega, validade, reserva , quantidade) VALUES
-('1', '21/03/2023', '45854833', '57'),
-('2', '20/09/2023', '4585454', '34'),
-('3', '10/02/2023', '21:00', '67');
+INSERT INTO naturalbeauty.entrega VALUES('1', '2023-03-21', '45854833', '57');
+INSERT INTO naturalbeauty.entrega VALUES('2', '2023-04-01', '45854564', '34');
+INSERT INTO naturalbeauty.entrega VALUES('3', '2023-07-15', '45841693', '67');
+```
+```sql
+SELECT * FROM naturalbeauty.entrega
+```
+![An alternative description](imagens/entrega.png)
 
-INSERT INTO `produto` (nome, tipoproduto, codigo , validade) VALUES
-('nome1 ', 'maquilhagem', '25894', '10/02/2024'),
-('nome2', 'comestico', '5849', '10/02/2024'),
-('nome3 ', 'perfumes', '94924', '15/06/2024'),
-('nome4 ', 'maquilhagem', '67324', '15/06/2024'),
-('nome5 ', 'perfumes', '53224', '20/01/2025'),
-('nome6 ', 'comestico', '9524', '28/06/2024'),
-('nome7 ', 'perfumes', '94924', '19/04/2024'),
-('nome8 ', 'maquilhagem', '22524', '03/11/2024'),
-('nome9 ', 'comesticos', '58424', '15/06/2024'),
-('nome10 ', 'perfumes', '94924', '15/11/2024'),
-('nome11 ', 'perfumes', '94924', '12/10/2024'),
-('nome12 ', 'comesticos', '64334', '01/02/2024'),
-('nome13 ', 'perfumes', '32114', '02/03/2024'),
-('nome14 ', 'maquilhagem', '785334', '08/08/2024'),
-('nome15 ', 'perfumes', '235753', '1/09/2025'),
-('nome16 ', 'perfumes', '5632', '12/09/2024'),
-('nome17 ', 'comesticos', '49493', '15/06/2024'),
-('nome18 ', 'comesticos', '34532', '02/06/2024'),
-('nome19 ', 'perfumes', '753432', '11/12/2024');
+### produto
 
-INSERT INTO `turno` (id, partedia, hora) VALUES
-('1', 'manha', '09:30'),
-('2', 'tarde', '13:00'),
-('3', 'tarde', '17:00'),
-('4', 'noite', '19:00'),
-('5', 'noite', '21:00');
+```sql
+INSERT INTO naturalbeauty.produto VALUES ('25894', 'nome1', 'maquilhagem', '2024-02-10');
+INSERT INTO naturalbeauty.produto VALUES ('5849', 'nome2', 'cosmetico', '2024-02-10');
+INSERT INTO naturalbeauty.produto VALUES ('94924', 'nome3', 'perfumes', '2024-06-15');
+INSERT INTO naturalbeauty.produto VALUES ('67324', 'nome4', 'maquilhagem', '2024-06-15');
+INSERT INTO naturalbeauty.produto VALUES ('53224', 'nome5', 'perfumes', '2025-01-20');
+INSERT INTO naturalbeauty.produto VALUES ('9524', 'nome6', 'comestico', '2024-06-28');
+INSERT INTO naturalbeauty.produto VALUES ('94524', 'nome7', 'perfumes', '2024-04-19');
+INSERT INTO naturalbeauty.produto VALUES ('22524', 'nome8', 'maquilhagem', '2024-11-03');
+INSERT INTO naturalbeauty.produto VALUES ('58424', 'nome9', 'cosmeticos', '2024-06-15');
+INSERT INTO naturalbeauty.produto VALUES ('94514', 'nome10', 'perfumes', '2024-11-15');
+INSERT INTO naturalbeauty.produto VALUES ('84924', 'nome11', 'perfumes', '2024-10-12');
+INSERT INTO naturalbeauty.produto VALUES ('64334', 'nome12', 'cosmeticos', '2024-02-01');
+INSERT INTO naturalbeauty.produto VALUES ('32114', 'nome13', 'perfumes', '2024-03-02');
+INSERT INTO naturalbeauty.produto VALUES ('785334', 'nome14', 'maquilhagem', '2024-08-08');
+INSERT INTO naturalbeauty.produto VALUES ('235753', 'nome15', 'perfumes', '2024-09-01');
+INSERT INTO naturalbeauty.produto VALUES ('5632', 'nome16', 'perfumes', '2024-09-12');
+INSERT INTO naturalbeauty.produto VALUES ('49493', 'nome17', 'cosmeticos', '2024-06-15');
+INSERT INTO naturalbeauty.produto VALUES ('34532', 'nome18', 'cosmeticos', '2024-06-15');
+INSERT INTO naturalbeauty.produto VALUES ('753432', 'nome19', 'perfumes', '2024-12-11');
+```
+```sql
+SELECT * FROM naturalbeauty.produto
+```
+![An alternative description](imagens/produto.png)
 
-INSERT INTO `formaçao` (nome, tipoformaçao) VALUES
-('nome1', 'maquilhagem'),
-('nome2', 'cosmestica'),
-('nome3', 'perfumaria');
+### turno
+
+```sql
+INSERT INTO naturalbeauty.turno VALUES ('manha', '1');
+INSERT INTO naturalbeauty.turno VALUES ('tarde', '2');
+INSERT INTO naturalbeauty.turno VALUES ('tarde', '3');
+INSERT INTO naturalbeauty.turno VALUES ('noite', '4');
+INSERT INTO naturalbeauty.turno VALUES ('noite', '5');
+```
+```sql
+SELECT * FROM naturalbeauty.turno
+```
+![An alternative description](imagens/turno.png)
+
+### formacao
+
+```sql
+INSERT INTO naturalbeauty.formacao VALUES ('maquilhagem', 'nome1');
+INSERT INTO naturalbeauty.formacao VALUES ('cosmetica', 'nome2');
+INSERT INTO naturalbeauty.formacao VALUES ('perfumaria', 'nome3');
+```
+```sql
+SELECT * FROM naturalbeauty.formacao
+```
+![An alternative description](imagens/formacao.png)
 
 
 
