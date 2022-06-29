@@ -220,7 +220,8 @@ Já se encontra na 2NF
 
 3NF
 
-Já se encontra na 3NF
+ENTREGA (<ins>nentrega</ins> , validade, reserva)
+ENCOMENDA (#reserva --> quantidade)
 
 ----
 PRODUTO (nome,tipoproduto, <ins>codigo</ins> ,validade )
