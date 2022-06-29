@@ -134,6 +134,7 @@ FUNCIONARIO (nome, {telefone (telefonepessoal, telefonecasa)}, morada, nic , <in
 1NF
 
 FUNCIONARIO (nome, morada, nic, <ins>nidentificacao</ins>)
+
 TELEFONE (#nidentificacao --> telefonepessoal, telefonecasa)
 
 2NF
@@ -195,6 +196,7 @@ FORNECEDOR (nome, <ins>nid</ins> , {telefone (telefonepessoal, telefoneempresa) 
 1NF
 
 FORNECEDOR (nome, <ins>nid</ins>)
+
 TELEFONE (#nid --> telefonepessoal, telefonecasa)
 
 2NF
