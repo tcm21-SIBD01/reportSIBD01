@@ -113,39 +113,126 @@ código --> nome, tipoProduto, validade
 
 n.id --> telefone, nome, morada, nic
 
----
-### 1ª Forma Normal (1NF)
+---FORMACAO (nome, tipoFormacao)
 
+1NF
 
-FUNCIONARIO (nome, #telefone, morada, nic, _ nidentificacao _)
+Já se encontra na 1NF
 
-CONTACTO (_ telefone _, telefonepessoal, telefonetrabalho)
-
-FORNECEDOR (nome, #telefone, _ nid _)
-
-CONTACTO (_ telefone _,telefonepessoal, telefonetrabalho)
-
-----
-### 2ª Forma Normal (2NF)
+2NF
 
 Já se encontra na 2NF
 
+3NF
 
-### 3ª Forma Normal (3NF)
+Já se encontra na 3NF
 
-ENTREGA (_ numeroentrega _,validade, #reserva)
+----
+FUNCIONARIO (telefone, nome, n.id, morada, nic)
 
-reservaquantidade (_ reserva _, quantidade)
+1NF
 
+Já se encontra na 1NF
 
-### Forma Normal de Boyce-Codd (BCNF)
+2NF
 
-Já se encontra na BCNF
+Já se encontra na 2NF
 
+3NF
 
-### 4ª Forma Normal (4NF)
+Já se encontra na 3NF
 
-Já se encontra na 4NF
+----
+TURNO (parteDia, id)
+
+1NF
+
+Já se encontra na 1NF
+
+2NF
+
+Já se encontra na 2NF
+
+3NF
+
+Já se encontra na 3NF
+
+----
+SECCAO (id, nome)
+
+1NF
+
+Já se encontra na 1NF
+
+2NF
+
+Já se encontra na 2NF
+
+3NF
+
+Já se encontra na 3NF
+
+----
+HORARIO (id, horaFim, horaInicio, diaSemana)
+
+1NF
+
+Já se encontra na 1NF
+
+2NF
+
+Já se encontra na 2NF
+
+3NF
+
+Já se encontra na 3NF
+
+----
+FORNECEDOR (nome, nid, telefone)
+
+1NF
+
+Já se encontra na 1NF
+
+2NF
+
+Já se encontra na 2NF
+
+3NF
+
+Já se encontra na 3NF
+
+----
+ENTREGA (quantidade, validade, reserva, nEntrega)
+
+1NF
+
+Já se encontra na 1NF
+
+2NF
+
+Já se encontra na 2NF
+
+3NF
+
+Já se encontra na 3NF
+
+----
+PRODUTO (nome, tipoProduto, validade, codigo)
+
+1NF
+
+Já se encontra na 1NF
+
+2NF
+
+Já se encontra na 2NF
+
+3NF
+
+Já se encontra na 3NF
+
+----
 
 
 ---
