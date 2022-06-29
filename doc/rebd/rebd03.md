@@ -113,7 +113,8 @@ código --> nome, tipoProduto, validade
 
 n.id --> telefone, nome, morada, nic
 
----FORMACAO (nome, tipoFormacao)
+---
+FORMACAO (nome, tipoFormacao)
 
 1NF
 
