@@ -221,6 +221,7 @@ Já se encontra na 2NF
 3NF
 
 ENTREGA (<ins>nentrega</ins> , validade, reserva)
+
 ENCOMENDA (#reserva --> quantidade)
 
 ----
